@@ -1,4 +1,7 @@
 import { CALGARY_NEIGHBORHOODS } from '@/data/neighborhoods'; import { SITE } from '@/data/site';
+
+export const dynamicParams = false; // only build the params we generate
+export const dynamic = 'force-static'; // ensure SSG
 export async function generateStaticParams(){ return CALGARY_NEIGHBORHOODS.map(n=>({ neighborhood: n.toLowerCase().replace(/\s+/g,'-') })); }
 function toTitle(s:string){ return s.replace(/-/g,' ').replace(/\b\w/g, m => m.toUpperCase()); }
 export async function generateMetadata({ params }:{ params:{ neighborhood:string }}){
