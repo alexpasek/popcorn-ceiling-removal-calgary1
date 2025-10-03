@@ -1,0 +1,2 @@
+export const metadata = { title: 'Thank You | Popcorn Ceiling Removal Calgary' };
+export default function Page(){ return(<section className="container-x py-24 text-center"><h1 className="text-3xl font-extrabold text-ink">Thanks! We received your request.</h1><p className="text-muted mt-2">We’ll reach out shortly. If it’s urgent, call us now.</p><a href="tel:+18253653770" className="btn btn-primary mt-6">Call (825) 365-3770</a></section>); }

@@ -1,0 +1,1 @@
+export const CALGARY_NEIGHBORHOODS = ["Beltline","Kensington","Sunnyside","Mission","Bridgeland","Renfrew","Mount Royal","Inglewood","Crescent Heights","Eau Claire","Signal Hill","Somerset","McKenzie Towne","Coventry Hills","Panorama Hills","Tuscany","Edgemont","Arbour Lake","Bowness","Varsity"];

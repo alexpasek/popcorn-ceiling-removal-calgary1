@@ -1,0 +1,3 @@
+import { SITE } from '@/data/site';
+export const metadata = { title: 'Contact | Popcorn Ceiling Removal Calgary' };
+export default function Page(){ return(<section className="container-x py-12 prose"><h1>Contact</h1><p>Call us at <a href={SITE.phoneHref}>{SITE.phone}</a> for a quick quote and scheduling. Serving {SITE.city}. Hours: {SITE.hours}.</p><p>Prefer text? <a href={"sms:" + SITE.phoneHref.replace('tel:', '')}>Tap to text</a>.</p><p>Or use our <a href="/quote">fast quote form</a>.</p></section>); }
