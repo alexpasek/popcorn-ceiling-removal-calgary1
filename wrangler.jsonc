@@ -10,5 +10,11 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "popcorn-ceiling-removal-calgary"
     }
+  ],
+   // ✅ add this
+   "r2_buckets": [
+    { "binding": "NEXT_INC_CACHE_R2_BUCKET", "bucket_name": "opennext-inc-cache" }
   ]
 }
+
+  
