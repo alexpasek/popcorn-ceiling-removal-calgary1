@@ -4,4 +4,14 @@ import worker from "../.open-next/worker.js";
 // File-based Pages Function wrapper that forwards everything to OpenNext.
 export async function onRequest(context) {
     return worker.fetch(context.request, context.env, context);
+} // functions/[[path]].js
+import worker from '../.open-next/worker.js';
+
+export const config = {
+    compatibility_date: '2024-11-08',
+    compatibility_flags: ['nodejs_compat'],
+};
+
+export async function onRequest(ctx) {
+    return worker.fetch(ctx.request, ctx.env, ctx);
 }
