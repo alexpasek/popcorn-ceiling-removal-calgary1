@@ -1,10 +1,17 @@
 import { CALGARY_NEIGHBORHOODS } from "@/data/neighborhoods";
 import { SITE } from "@/data/site";
 
-export const runtime = "edge"; // ✅ required by Cloudflare adapter for non-static routes
-export const dynamic = "force-dynamic"; // render on Edge (no SSG)
-export const revalidate = 0; // no caching by Next; let CF handle caching if you want
+// ✅ Build these pages statically (SSG) and only for params we generate
+export const dynamic = "force-static";
 export const dynamicParams = false;
+
+// Build-time list of all neighborhood slugs
+const toSlug = (s: string) => s.toLowerCase().replace(/\s+/g, "-");
+
+// 🔑 Generate the paths to pre-render
+export async function generateStaticParams() {
+  return CALGARY_NEIGHBORHOODS.map((n) => ({ neighborhood: toSlug(n) }));
+}
 
 function toTitle(s: string) {
   return s.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
@@ -24,10 +31,9 @@ export async function generateMetadata({
 export default function Page({ params }: { params: { neighborhood: string } }) {
   const name = toTitle(params.neighborhood);
 
-  // Optional: only allow the neighborhoods you list
-  // If you want to 404 unknown slugs, uncomment the guard below.
-  // if (!CALGARY_NEIGHBORHOODS.map(n => n.toLowerCase().replace(/\s+/g,'-')).includes(params.neighborhood)) {
-  //   notFound(); // import { notFound } from 'next/navigation'
+  // Optional guard to 404 unknown slugs:
+  // if (!CALGARY_NEIGHBORHOODS.map(toSlug).includes(params.neighborhood)) {
+  //   return notFound(); // import { notFound } from 'next/navigation'
   // }
 
   const serviceSchema = {
