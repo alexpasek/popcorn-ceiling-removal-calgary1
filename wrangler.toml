@@ -1,6 +1,12 @@
-# wrangler.toml
-name = "popcorn-ceiling-removal-calgary3"   # <-- EXACT Pages project name
-pages_build_output_dir = ".open-next"
+# wrangler.toml  (Workers deployment)
+name = "popcorn-ceiling-removal-worker"
+main = ".open-next/worker.js"
 
 compatibility_date = "2024-11-08"
 compatibility_flags = ["nodejs_compat"]
+
+# Get a workers.dev URL for testing (optional but convenient)
+workers_dev = true
+
+[assets]
+directory = ".open-next/assets"
