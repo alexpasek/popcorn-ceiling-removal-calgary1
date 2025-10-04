@@ -4,6 +4,7 @@ import { SITE } from "@/data/site";
 export const runtime = "edge"; // ✅ required by Cloudflare adapter for non-static routes
 export const dynamic = "force-dynamic"; // render on Edge (no SSG)
 export const revalidate = 0; // no caching by Next; let CF handle caching if you want
+export const dynamicParams = false;
 
 function toTitle(s: string) {
   return s.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
