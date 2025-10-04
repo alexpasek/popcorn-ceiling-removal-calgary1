@@ -1,4 +1,4 @@
-// functions/[[path]].js
+// functions/_worker.js
 import worker from "../.open-next/worker.js";
 
 export const config = {
@@ -6,6 +6,5 @@ export const config = {
     compatibility_flags: ["nodejs_compat"],
 };
 
-export async function onRequest(ctx) {
-    return worker.fetch(ctx.request, ctx.env, ctx);
-}
+// Hand off the whole request lifecycle to OpenNext's worker
+export default worker;
