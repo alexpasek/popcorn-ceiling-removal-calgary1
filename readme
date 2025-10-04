@@ -1,0 +1,153 @@
+1) What to keep vs delete
+Keep
+
+GitHub repo (your code)
+
+Workers project named popcorn-ceiling-removal-worker (this is serving your site now)
+
+wrangler.toml (clean, minimal config—see below)
+
+Delete (to avoid conflicts & confusion)
+
+Cloudflare Pages project(s) for this site (e.g. the one that created the *.pages.dev URL).
+In Cloudflare Dashboard → Pages → select the project → Settings → Danger zone → Delete.
+If a custom domain was attached to Pages, detach it there first.
+
+In your repo: the old functions/ folder used for Pages Functions.
+
+git rm -r functions
+git commit -m "chore: remove Pages Functions (using Worker+assets now)"
+git push
+
+2) Make sure wrangler.toml is correct (Worker+assets)
+
+Use a minimal config like this (replace the route if you’ll put it on your own domain):
+
+name = "popcorn-ceiling-removal-worker"
+main = ".open-next/worker.js"
+compatibility_date = "2024-11-08"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+
+# Optional: attach a custom domain
+# routes = [
+#   { pattern = "popcorn.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+
+If your current wrangler.toml has old keys like build.upload or assets.workers_dev, delete them (they cause those “Unexpected fields” warnings).
+
+3) Day-to-day workflow (local)
+
+Dev locally (hot reload):
+
+npm run dev
+
+
+Test the Worker locally (closest to prod):
+
+npx -y @opennextjs/cloudflare@1 build
+npx wrangler dev
+
+
+Deploy manually (what you just did):
+
+npx -y @opennextjs/cloudflare@1 build
+npx wrangler deploy
+
+
+Secrets (email API keys, etc.) live on the Worker and persist across deploys:
+
+npx wrangler secret put RESEND_API_KEY
+npx wrangler secret put CONTACT_TO_EMAIL
+npx wrangler secret put CONTACT_FROM_EMAIL
+
+4) Auto-deploy from GitHub (recommended)
+
+Set up CI so every push to main builds + deploys automatically.
+
+In GitHub → Settings → Secrets and variables → Actions → New repository secret
+Add:
+
+CLOUDFLARE_ACCOUNT_ID (from your CF dashboard)
+
+CLOUDFLARE_API_TOKEN (create a token with Workers Scripts:Edit + Account:Read; add Zone:Read if you use routes)
+
+Add a workflow: .github/workflows/deploy.yml
+
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: workers-deploy
+      cancel-in-progress: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build with OpenNext (Cloudflare)
+        run: npx -y @opennextjs/cloudflare@1 build
+
+      - name: Deploy with Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+
+
+You do not need to copy your app secrets into GitHub for this—once you’ve set them on the Worker (via wrangler secret put or in the CF dashboard), they’re used for every deploy.
+
+Optional PR previews: you can add another job that deploys to a temporary worker name like popcorn-ceiling-removal-worker-pr-${{ github.event.number }} and tears it down later.
+
+5) Point a custom domain (if you want)
+
+Add a route to wrangler.toml:
+
+routes = [
+  { pattern = "popcorn.yourdomain.com/*", zone_name = "yourdomain.com" }
+]
+
+
+Then:
+
+npx wrangler deploy
+
+
+Cloudflare will prompt you to add/confirm the DNS record in the zone.
+Important: The domain must not still be attached to any Cloudflare Pages project.
+
+6) Monitoring & rollbacks
+
+Logs:
+
+npx wrangler tail
+
+
+Roll back (to a previous version ID Wrangler printed):
+
+npx wrangler rollback <version-id>
+
+7) What “sync with GitHub & Cloudflare” means
+
+You push code to GitHub → GitHub Action runs opennext build → runs wrangler deploy → Cloudflare updates the Worker+assets globally.
+
+If you deploy locally with wrangler deploy, you’re bypassing CI (still fine). CI will deploy again on the next push.

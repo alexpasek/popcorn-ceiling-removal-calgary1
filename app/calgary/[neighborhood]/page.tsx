@@ -1,13 +1,12 @@
-// app/(locations)/calgary/[neighborhood]/page.tsx
+// app/calgary/[neighborhood]/page.tsx
 import { notFound } from "next/navigation";
 
-// ✅ We want static HTML per neighborhood — no on-demand render:
-export const dynamic = "error";
-export const dynamicParams = false;
-export const revalidate = false; // no ISR on Workers
+export const dynamic = "force-static"; // ✅ force SSG
+export const dynamicParams = false; // ✅ only the params we return below
+export const revalidate = false; // no ISR
 
-// ❌ DO NOT add: export const runtime = "edge"
-// (OpenNext Cloudflare 1.x forbids per-page edge runtime)
+// ❌ do NOT export: runtime = "edge"
+// ❌ do NOT call cookies(), headers(), unstable_noStore(), etc.
 
 const SLUGS = [
   "beltline",
@@ -49,16 +48,14 @@ export default function Page({ params }: { params: { neighborhood: string } }) {
   const slug = params.neighborhood;
   if (!SLUGS.includes(slug as Neighborhood)) notFound();
 
-  const niceName = titleFromSlug(slug);
-
   return (
-    <main style={{ padding: 24, fontFamily: "system-ui, Arial, sans-serif" }}>
+    <main style={{ padding: 24, fontFamily: "system-ui, Arial" }}>
       <h1 style={{ fontSize: 32, marginBottom: 12 }}>
-        Popcorn Ceiling Removal in {niceName}
+        Popcorn Ceiling Removal in {titleFromSlug(slug)}
       </h1>
       <p style={{ marginBottom: 16 }}>
-        We service {niceName} with dust-controlled popcorn ceiling removal,
-        drywall repair, and painting.
+        We service {titleFromSlug(slug)} with dust-controlled popcorn ceiling
+        removal.
       </p>
       <a
         href="/get-quote"
