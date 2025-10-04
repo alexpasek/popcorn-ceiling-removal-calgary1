@@ -7,5 +7,6 @@ export const config = {
 };
 
 export async function onRequest(ctx) {
+    // Route every request to the OpenNext worker
     return worker.fetch(ctx.request, ctx.env, ctx);
 }
