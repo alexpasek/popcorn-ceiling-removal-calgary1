@@ -1,15 +1,9 @@
-# Node/Next
-node_modules/
-.next/
-.out/
-dist/
-coverage/
-# CF/Vercel
-.vercel/
-# OS/Editor
+node_modules
+.next
+.open-next
+.vercel
+dist
+out
 .DS_Store
-*.log
-# Env
 .env
 .env.*
-EOF
