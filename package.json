@@ -13,7 +13,8 @@
         "build:pages": "npx -y @opennextjs/cloudflare@1 build"
     },
     "dependencies": {
-        "next": "14.2.5",
+        "@cloudflare/next-on-pages": "^1.13.16",
+        "next": "^15.5.2",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
