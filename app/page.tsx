@@ -8,11 +8,12 @@ export default function Page(){ return(<>
   </section>
   <section className="container-x py-12"><h2 className="text-2xl font-bold text-ink">Before & After</h2><div className="mt-4 max-w-3xl mx-auto"><BeforeAfter before="/images/before-after/before.jpg" after="/images/before-after/after.jpg" alt="Popcorn ceiling before and smooth after"/></div></section>
   <section className="container-x py-12"><h2 className="text-2xl font-bold text-ink">Our Services</h2>
-    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
       <ServiceCard title="Popcorn Ceiling Removal" href="/services/popcorn-ceiling-removal">Clean scraping, skim coat, sanding & ceiling paint-ready finish.</ServiceCard>
       <ServiceCard title="Drywall Installation & Repair" href="/services/drywall-installation">Full installs, patches, seams/taping, mudding, sanding—ready for paint.</ServiceCard>
       <ServiceCard title="Wallpaper Removal" href="/services/wallpaper-removal">Careful removal, adhesive cleanup, wall patching, and prime.</ServiceCard>
       <ServiceCard title="Interior Painting" href="/services/interior-painting">Ceilings, walls, trim and doors. Sharp cut lines, durable finishes.</ServiceCard>
+      <ServiceCard title= "Knockdown Ceiling Repair" href="/services/knockdown-ceiling-repair" >Texture matching, water stains, crack repairs, pot light patches. </ServiceCard>
     </div>
   </section>
   <NeighborhoodGrid/>
