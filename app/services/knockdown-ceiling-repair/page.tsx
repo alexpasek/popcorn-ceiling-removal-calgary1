@@ -1,10 +1,10 @@
 // app/services/knockdown-ceiling-repair/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import MobileCTA from "@/components/MobileCTA";
 
 export const revalidate = 86400; // re-build at most once per day
 
-// === SEO metadata (Next.js App Router) ===
 export const metadata: Metadata = {
   title:
     "Knockdown Ceiling Repair Calgary | Texture Matching & Water Damage Fix",
@@ -55,22 +55,23 @@ const neighborhoods = [
   "west-springs",
 ];
 
+// ✅ Use brand primary to match your existing MobileCTA (bg-primary-600)
+const btnPrimary =
+  "inline-flex items-center justify-center rounded-2xl bg-primary-600 text-white px-6 py-3 text-base font-semibold shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600";
+const btnSecondary =
+  "inline-flex items-center justify-center rounded-2xl border border-primary-600 text-primary-700 px-6 py-3 text-base font-medium hover:bg-primary-50";
+
 export default function Page() {
   const siteName = "Popcorn Ceiling Removal PRO Calgary";
-  const businessUrl = "https://popcorn-ceiling-removal-calgaryfinal.pages.dev"; // update if you have a custom domain
+  const businessUrl = "https://popcorn-ceiling-removal-calgaryfinal.pages.dev";
 
-  // --- JSON-LD: Service ---
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Knockdown Ceiling Repair",
     serviceType: "Ceiling texture repair",
     areaServed: { "@type": "City", name: "Calgary" },
-    provider: {
-      "@type": "LocalBusiness",
-      name: siteName,
-      url: businessUrl,
-    },
+    provider: { "@type": "LocalBusiness", name: siteName, url: businessUrl },
     offers: {
       "@type": "Offer",
       priceCurrency: "CAD",
@@ -83,7 +84,6 @@ export default function Page() {
     },
   } as const;
 
-  // --- JSON-LD: FAQ ---
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -144,44 +144,104 @@ export default function Page() {
       {/* JSON-LD for SEO */}
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
       />
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
 
-      {/* Hero */}
-      <section className="text-center">
-        <p className="text-sm uppercase tracking-wider text-gray-500">
-          Ceiling Texture Specialists
-        </p>
-        <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">
-          Knockdown Ceiling Repair in Calgary
-        </h1>
-        <p className="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-          Water stains, cracks, pot-light cutouts, or mismatched texture—our
-          Calgary team repairs and blends knockdown ceilings so the patch
-          disappears. Dust-controlled. Paint-ready.
-        </p>
-        <div className="mt-6 flex items-center justify-center gap-3">
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="rounded-2xl border px-5 py-3 text-base font-medium hover:bg-gray-50"
-          >
-            Call {PHONE}
-          </a>
-          <Link
-            href="/quote"
-            className="rounded-2xl bg-black text-white px-5 py-3 text-base font-semibold hover:opacity-90"
-          >
-            Get a Free Estimate
-          </Link>
+      {/* HERO — split layout with image */}
+      <section className="grid gap-8 md:grid-cols-2 items-center">
+        <div className="text-left">
+          <p className="text-sm uppercase tracking-wider text-gray-500">
+            Ceiling Texture Specialists
+          </p>
+          <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">
+            Knockdown Ceiling Repair in Calgary
+          </h1>
+          <p className="mt-4 text-base md:text-lg text-gray-600">
+            Water stains, cracks, pot-light cutouts, or mismatched texture—our
+            Calgary team blends knockdown ceilings so the patch disappears.
+            Dust-controlled. Paint-ready.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link href="/quote" className={btnPrimary}>
+              Get My Free Quote
+            </Link>
+            <a href={`tel:${PHONE_TEL}`} className={btnSecondary}>
+              Call {PHONE}
+            </a>
+          </div>
+          <div className="mt-4 text-xs text-gray-500">
+            Licensed & Insured • HEPA Dust Control • Texture Match Guarantee
+          </div>
         </div>
-        <div className="mt-4 text-xs text-gray-500">
-          Licensed & Insured • HEPA Dust Control • Texture Match Guarantee
+
+        {/* Right-side hero image (replace with your real image) */}
+        <div className="rounded-3xl overflow-hidden border">
+          <img
+            src="/images/knockdown/hero-knockdown.jpg"
+            alt="Knockdown ceiling repair in Calgary — technician blending texture"
+            width={900}
+            height={600}
+            className="w-full h-auto object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </section>
+
+      {/* BEFORE / AFTER STRIP */}
+      <section className="mt-12">
+        <h2 className="text-2xl md:text-3xl font-bold">Before &amp; After</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              srcBefore: "/images/knockdown/before-water-stain.jpg",
+              srcAfter: "/images/knockdown/after-water-stain.jpg",
+              alt: "Water stain repair — before and after",
+            },
+            {
+              srcBefore: "/images/knockdown/before-potlight.jpg",
+              srcAfter: "/images/knockdown/after-potlight.jpg",
+              alt: "Pot light patch — before and after",
+            },
+            {
+              srcBefore: "/images/knockdown/before-crack.jpg",
+              srcAfter: "/images/knockdown/after-crack.jpg",
+              alt: "Ceiling crack repair — before and after",
+            },
+          ].map((g, i) => (
+            <figure
+              key={i}
+              className="rounded-2xl overflow-hidden border bg-white"
+            >
+              <div className="grid grid-cols-2">
+                <img
+                  src={g.srcBefore}
+                  alt={`${g.alt} — before`}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src={g.srcAfter}
+                  alt={`${g.alt} — after`}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption className="px-3 py-2 text-xs text-gray-600">
+                Matched knockdown texture and paint-ready finish.
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -223,30 +283,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Why choose us */}
-      <section className="mt-12">
-        <h2 className="text-2xl md:text-3xl font-bold">
-          Why Calgary Homeowners Choose Us
-        </h2>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm text-gray-700">
-          <li className="rounded-2xl border p-4">
-            HEPA dust control & full room protection
-          </li>
-          <li className="rounded-2xl border p-4">
-            True knockdown texture match (samples on-site)
-          </li>
-          <li className="rounded-2xl border p-4">
-            Same-day small patches; quick turnaround
-          </li>
-          <li className="rounded-2xl border p-4">
-            Prime & paint option for a uniform finish
-          </li>
-          <li className="rounded-2xl border p-4">
-            Clear, itemized quotes and friendly crew
-          </li>
-          <li className="rounded-2xl border p-4">
-            Fully insured, excellent local references
-          </li>
+      {/* Trust / badges */}
+      <section className="mt-12 rounded-2xl border p-5 bg-white">
+        <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-700">
+          <li>✔ Texture Match Guarantee</li>
+          <li>✔ 100% Satisfaction</li>
+          <li>✔ Clean Worksite & HEPA Dust Control</li>
+          <li>✔ Clear, Itemized Quotes</li>
         </ul>
       </section>
 
@@ -269,10 +312,13 @@ export default function Page() {
           <li className="rounded-2xl border p-4">
             Finish: stain-block primer and paint to a consistent sheen.
           </li>
+          <li className="rounded-2xl border p-4">
+            Final tidy: site cleanup and walk-through.
+          </li>
         </ol>
       </section>
 
-      {/* Pricing signals (non-binding) */}
+      {/* Pricing */}
       <section className="mt-12">
         <h2 className="text-2xl md:text-3xl font-bold">Typical Pricing</h2>
         <p className="mt-4 text-gray-700 text-sm">
@@ -281,22 +327,16 @@ export default function Page() {
           pricing, share a photo and rough dimensions and we can quote quickly.
         </p>
         <div className="mt-4 flex gap-3 flex-wrap">
-          <Link
-            href="/quote"
-            className="rounded-2xl bg-black text-white px-5 py-3 text-sm font-semibold hover:opacity-90"
-          >
-            Get a Free Estimate
+          <Link href="/quote" className={btnPrimary}>
+            Start My Quote
           </Link>
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="rounded-2xl border px-5 py-3 text-sm font-semibold hover:bg-gray-50"
-          >
+          <a href={`tel:${PHONE_TEL}`} className={btnSecondary}>
             Call {PHONE}
           </a>
         </div>
       </section>
 
-      {/* Related services (internal links) */}
+      {/* Related services */}
       <section className="mt-12">
         <h2 className="text-2xl md:text-3xl font-bold">
           Related Calgary Services
@@ -328,7 +368,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Areas we serve: deep internal links to city pages */}
+      {/* Areas we serve */}
       <section className="mt-12">
         <h2 className="text-2xl md:text-3xl font-bold">
           Areas We Serve in Calgary
@@ -340,7 +380,7 @@ export default function Page() {
               href={`/calgary/${slug}`}
               className="rounded-xl border px-3 py-2 hover:bg-gray-50"
               aria-label={`Knockdown ceiling repair in ${slug.replace(
-                "-",
+                /-/g,
                 " "
               )}`}
             >
@@ -350,12 +390,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FAQ visible content (pairs with JSON-LD) */}
+      {/* FAQ */}
       <section className="mt-12">
         <h2 className="text-2xl md:text-3xl font-bold">
           Frequently Asked Questions
         </h2>
-        <div className="mt-6 divide-y rounded-2xl border">
+        <div className="mt-6 divide-y rounded-2xl border bg-white">
           {[
             {
               q: "What is knockdown ceiling repair?",
@@ -392,37 +432,31 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Final conversion block */}
       <section className="mt-12 text-center">
         <div className="rounded-3xl border p-8 bg-white">
           <h2 className="text-2xl md:text-3xl font-bold">
-            Need a seamless knockdown repair?
+            Ready to book a repair?
           </h2>
           <p className="mt-2 text-gray-600">
-            Send a couple of photos and we will quote fast.
+            Send a couple of photos and we’ll confirm price & schedule.
           </p>
           <div className="mt-5 flex items-center justify-center gap-3">
-            <Link
-              href="/quote"
-              className="rounded-2xl bg-black text-white px-6 py-3 text-base font-semibold hover:opacity-90"
-            >
-              Get My Free Quote
+            <Link href="/quote" className={btnPrimary}>
+              Book Knockdown Repair
             </Link>
-            <a
-              href={`tel:${PHONE_TEL}`}
-              className="rounded-2xl border px-6 py-3 text-base font-medium hover:bg-gray-50"
-            >
+            <a href={`tel:${PHONE_TEL}`} className={btnSecondary}>
               Call {PHONE}
             </a>
           </div>
         </div>
       </section>
 
-      {/* Image SEO notes (replace with your actual images)
-        - Use web-optimized JPG/WEBP around 1600–2000px width
-        - Example alt text: "Knockdown ceiling repair in Calgary — water stain patch before and after"
-        - Add your images to a gallery component if desired
-      */}
+      {/* spacer so sticky bar doesn't cover content on mobile */}
+      <div className="h-14 md:hidden" aria-hidden />
+
+      {/* ✅ Render the sticky mobile CTA (already used on other pages) */}
+      <MobileCTA />
     </main>
   );
 }
