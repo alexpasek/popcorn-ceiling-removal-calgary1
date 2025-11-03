@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+export const runtime = "edge";  
 
 function isSpam(body:any){
   if (body.company && String(body.company).trim() !== '') return 'honeypot filled';

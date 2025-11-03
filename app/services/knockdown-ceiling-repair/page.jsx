@@ -242,7 +242,7 @@ export default function KnockdownRepairPage() {
           <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-sm border border-slate-200">
             {/* Replace with your real knockdown repair image */}
             <img
-              src="/images/knockdown/hero.webp"
+              src="/images/images/knockdown/hero-knockdown.jpg" ///Users/alex/popcorn-ceiling-removal-calgary1/public/images/images/knockdown/hero-knockdown.jpg
               alt="Knockdown ceiling repair in Calgary — technician blending the texture"
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
