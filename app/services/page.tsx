@@ -3,7 +3,7 @@ export const metadata = { title: 'Services | Popcorn Ceiling Removal Calgary' };
 const items = [
   {
     title: "Popcorn Ceiling Removal",
-    href: "/services/popcorn-ceiling-removal",
+    href: "/services/popcorn-ceiling-removal-calgary",
   },
   {
     title: "Drywall Installation & Repair",

@@ -1,5 +1,9 @@
 export const SITE = {
   brand: "Popcorn Ceiling Removal Calgary",
+  accent: '#E31B23',
+  socials: {
+    instagram: 'https://instagram.com/yourprofile',
+    facebook: 'https://facebook.com/yourpage'},
   phone: "(825) 365-3770",
   phoneHref: "tel:+18253653770",
   city: "Calgary, AB",
