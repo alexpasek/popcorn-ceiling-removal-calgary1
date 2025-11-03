@@ -191,7 +191,7 @@ export default function AboutPage() {
           {/* The single image — replace src with your generated team/van photo */}
           <div className="relative aspect-[16/11] rounded-2xl overflow-hidden shadow-sm border border-slate-200">
             <img
-              src="/images/van-team.webp"
+              src="/images/popcorn-ceiling-removal-calgary-team.png"
               alt="Our Calgary ceiling crew in front of the work van"
               className="absolute inset-0 h-full w-full object-cover"
               loading="eager"
