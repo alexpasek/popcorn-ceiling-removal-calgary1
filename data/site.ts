@@ -1,7 +1,7 @@
 export const SITE = {
   brand: "Popcorn Ceiling Removal Calgary",
-  phone: "(111) 111-1111",
-  phoneHref: "tel:+1111111111",
+  phone: "(825) 365-3770",
+  phoneHref: "tel:+18253653770",
   city: "Calgary, AB",
   domain: "https://your-domain.example",
   description:
@@ -12,3 +12,4 @@ export const SITE = {
     facebook: "https://facebook.com/your_page",
   },
 };
+//here you can change phone number 

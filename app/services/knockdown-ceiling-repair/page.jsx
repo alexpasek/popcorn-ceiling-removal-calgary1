@@ -24,7 +24,8 @@ export const metadata = {
 };
 
 export default function KnockdownRepairPage() {
-  const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER || "(111) 111-1111";
+  const PHONE_NUMBER =
+    process.env.NEXT_PUBLIC_PHONE_NUMBER || "(825) 365-3770";
   const PHONE_HREF = "tel:" + PHONE_NUMBER.replace(/[^0-9]/g, "");
 
   const jsonLdService = {
