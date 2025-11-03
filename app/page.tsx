@@ -52,10 +52,11 @@ export default function Page(){ return (
           Ceilings, walls, trim and doors. Sharp cut lines, durable finishes.
         </ServiceCard>
         <ServiceCard
-          title="Wallpaper Removal"
-          href="/services/wallpaper-removal"
+          title="Knockdown Ceiling Repair"
+          href="/services/knockdown-ceiling-repair"
         >
-          Careful removal, adhesive cleanup, wall patching, and prime.
+          Careful removal, adhesive cleanup, ceiling patching,retexturing and
+          prime.
         </ServiceCard>
       </div>
     </section>
