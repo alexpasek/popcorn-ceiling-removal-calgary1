@@ -220,7 +220,7 @@ export default function AboutPage() {
             <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-slate-700">
               <li>
                 <Link
-                  href="/services/popcorn-ceiling-removal"
+                  href="/services/popcorn-ceiling-removal-calgary"
                   className="underline"
                 >
                   Popcorn ceiling removal
@@ -255,7 +255,7 @@ export default function AboutPage() {
             </ul>
             <div className="mt-4 flex gap-3 text-sm">
               <Link
-                href="/services/popcorn-ceiling-removal"
+                href="/services/popcorn-ceiling-removal-calgary"
                 className="underline"
               >
                 See popcorn removal process
