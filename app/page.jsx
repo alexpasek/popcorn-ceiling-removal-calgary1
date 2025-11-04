@@ -187,25 +187,25 @@ export default function Page() {
 
       {/* LOCAL SEO COPY WITH INTERNAL LINKS */}
       <section className="container-x py-12">
-        <div className="prose max-w-none prose-headings:text-ink prose-p:text-ink prose-strong:text-ink$1">
+        <div className="prose max-w-none prose-headings:text-ink prose-p:text-ink prose-strong:text-ink">
           <h2>
             Calgary Popcorn Ceiling Removal, Drywall, and Painting — Done Right
           </h2>
           <p>
             We help {city} homeowners modernize their spaces with{" "}
-            <Link href="/services/popcorn/" className="link-primary">
+            <Link href="/services/popcorn-ceiling-removal-calgary/" className="link-primary">
               popcorn ceiling removal
             </Link>
             ,{" "}
-            <Link href="/services/drywall/" className="link-primary">
+            <Link href="/services/drywall-installation/" className="link-primary">
               drywall installation & repair
             </Link>
             ,{" "}
-            <Link href="/services/wallpaper/" className="link-primary">
+            <Link href="/services/wallpaper-removal/" className="link-primary">
               wallpaper removal
             </Link>
             , and{" "}
-            <Link href="/services/painting/" className="link-primary">
+            <Link href="/services/interior-painting/" className="link-primary">
               interior painting
             </Link>
             . Expect clean prep, dust‑smart sanding, straight lines, and a
@@ -279,26 +279,6 @@ export default function Page() {
         </ol>
       </section>
 
-      {/* POPULAR NEIGHBOURHOODS: INTERNAL LINKS FOR LOCAL SEO */}
-      <section className="container-x py-12">
-        <h2 className="text-2xl font-bold text-ink">
-          Popular {city} Neighbourhoods We Serve
-        </h2>
-        <p className="mt-2 max-w-3xl text-muted">
-          Click a neighbourhood to see service details and photos in your area.
-        </p>
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {neighbourhoods.map((n) => (
-            <Link
-              key={n}
-              href={`/calgary/${toSlug(n)}`}
-              className="rounded-xl border px-3 py-2 text-sm text-ink transition hover:bg-red-50 hover:border-red-200"
-            >
-              {n}
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* REVIEWS PREVIEW */}
       <section className="container-x py-12">
@@ -332,7 +312,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* NEIGHBOURHOOD GRID (your original component, keep for depth) */}
+      {/*  popular NEIGHBOURHOOD GRID (your original component, keep for depth) */}
       <NeighborhoodGrid />
 
       {/* FINAL CTA */}
