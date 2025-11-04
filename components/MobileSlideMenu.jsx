@@ -53,7 +53,7 @@ export default function MobileSlideMenu() {
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="lg:hidden fixed right-3 z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-transparent text-ink top-[calc(env(safe-area-inset-top,0)+12px)]"
+        className="lg:hidden fixed right-3 top-[calc(env(safe-area-inset-top,0)+12px)] z-50 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-transparent text-ink ${open ? 'opacity-0 pointer-events-none' : ''}"
       >
         {open ? (
           <svg
@@ -86,7 +86,7 @@ export default function MobileSlideMenu() {
 
       {/* Overlay + slideout */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 ${
+        className={`lg:hidden fixed inset-0 z-50 ${
           open ? "visible" : "invisible"
         }`}
       >
