@@ -396,7 +396,7 @@ export default function KnockdownRepairPage() {
           </h2>
           <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-slate-800">
             {[
-              ["Popcorn Ceiling Removal", "/services/popcorn-ceiling-removal"],
+              ["Popcorn Ceiling Removal", "/services/popcorn-ceiling-removal-calgary"],
               [
                 "Drywall Installation & Repair",
                 "/services/drywall-installation",
