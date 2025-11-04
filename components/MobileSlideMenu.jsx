@@ -92,7 +92,7 @@ export default function MobileSlideMenu() {
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-white transition-opacity ${
+          className={`absolute inset-0 bg-bg-black/30 transition-opacity ${
             open ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setOpen(false)}

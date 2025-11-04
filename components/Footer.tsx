@@ -131,41 +131,44 @@ export default function Footer() {
           </p>
 
           {/* Follow us (centered below text) */}
-          {socialLinks.length > 0 && (
-            <div className="mt-6">
-              <div className="flex items-center justify-center">
-                <span className="text-xs font-semibold uppercase tracking-[.2em] text-muted">
-                  Follow us
-                </span>
+
+          <div className="mt-3 mb-[calc(env(safe-area-inset-bottom)+60px)] md:mb-0">  {/*adjust icons heights above phone number */}
+            {socialLinks.length > 0 && (
+              <div className="mt-6">
+                <div className="flex items-center justify-center">
+                  <span className="text-xs font-semibold uppercase tracking-[.2em] text-muted">
+                    Follow us
+                  </span>
+                </div>
+                <ul className="mt-3 flex justify-center gap-3">
+                  {socialLinks.map(({ name, href, key, svg: Icon }) => (
+                    <li key={key}>
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={name}
+                        className="inline-flex items-center justify-center rounded-full transition-transform duration-200 will-change-transform hover:-translate-y-0.5 active:translate-y-0"
+                        style={{
+                          width: 156, // bigger button
+                          height: 56, // bigger button
+                          color: accent,
+                          background: `radial-gradient(120% 120% at 30% 20%, #fff 0%, ${tint05} 45%, ${tint10} 100%)`,
+                          border: `1px solid ${border20}`,
+                          boxShadow:
+                            // inner highlights + outer elevation for a 3D pill
+                            "inset 0 1px 0 rgba(255,255,255,.7), inset 0 -1px 0 rgba(0,0,0,.06), 0 8px 18px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.08)",
+                          backdropFilter: "saturate(120%)",
+                        }}
+                      >
+                        <Icon className="h-10 w-10" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="mt-3 flex justify-center gap-3">
-                {socialLinks.map(({ name, href, key, svg: Icon }) => (
-                  <li key={key}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={name}
-                      className="inline-flex items-center justify-center rounded-full transition-transform duration-200 will-change-transform hover:-translate-y-0.5 active:translate-y-0"
-                      style={{
-                        width: 156, // bigger button
-                        height: 56, // bigger button
-                        color: accent,
-                        background: `radial-gradient(120% 120% at 30% 20%, #fff 0%, ${tint05} 45%, ${tint10} 100%)`,
-                        border: `1px solid ${border20}`,
-                        boxShadow:
-                          // inner highlights + outer elevation for a 3D pill
-                          "inset 0 1px 0 rgba(255,255,255,.7), inset 0 -1px 0 rgba(0,0,0,.06), 0 8px 18px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.08)",
-                        backdropFilter: "saturate(120%)",
-                      }}
-                    >
-                      <Icon className="h-10 w-10" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </footer>
