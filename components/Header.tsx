@@ -7,9 +7,9 @@ export default function Header(){
       <div className="container-x flex items-center justify-between py-4 gap-4">
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/logo.png"
+            src="/logo.jpg"
             alt={SITE.brand}
-            className="h-11 md:h-12 w-auto"
+            className="h-12 md:h-20 w-auto"
           />
           <span className="font-extrabold tracking-tight text-ink text-lg sm:text-xl">
             {SITE.brand}

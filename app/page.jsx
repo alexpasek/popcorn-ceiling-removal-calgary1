@@ -6,9 +6,10 @@ import ServiceCard from "@/components/ServiceCard";
 import NeighborhoodGrid from "@/components/NeighborhoodGrid";
 import { SITE } from "@/data/site";
 
+
 // Shared CTA styles (match front page brand buttons)
 const BTN =
-  "inline-flex items-center justify-center rounded-xl bg-red-600 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600/30";
+  "inline-flex items-center justify-center rounded-xl !bg-red-600 !text-white px-4 py-2 font-semibold shadow-sm transition hover:!bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:!ring-red-600/30";
 const BTN_ALT =
   "inline-flex items-center justify-center rounded-xl border border-red-600 px-4 py-2 font-semibold text-red-700 hover:bg-red-50 transition";
 
@@ -105,7 +106,7 @@ export default function Page() {
       <Script id="home-faq-ld" type="application/ld+json">
         {JSON.stringify(faqLd)}
       </Script>
-
+    
       {/* HERO (keep your existing hero component) */}
       <Hero />
 
@@ -141,20 +142,26 @@ export default function Page() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <ServiceCard
             title="Popcorn Ceiling Removal"
-            href="/services/popcorn-ceiling-removal-calgary/"
+            href="/services/popcorn-ceiling-removal-calgary"
           >
             Clean scraping, skim coat, sanding & modern, paint‑ready ceilings.
           </ServiceCard>
           <ServiceCard
             title="Drywall Installation & Repair"
-            href="/services/drywall/"
+            href="/services/drywall-installation"
           >
             Full installs, patches, taping, mudding, sanding — paint‑ready.
           </ServiceCard>
-          <ServiceCard title="Wallpaper Removal" href="/services/wallpaper/">
+          <ServiceCard
+            title="Wallpaper Removal"
+            href="/services/wallpaper-removal"
+          >
             Safe stripping, adhesive cleanup, repairs, primer — paint‑ready.
           </ServiceCard>
-          <ServiceCard title="Interior Painting" href="/services/painting/">
+          <ServiceCard
+            title="Interior Painting"
+            href="/services/interior-painting"
+          >
             Ceilings, walls, trim & doors. Sharp cut‑lines, durable finishes.
           </ServiceCard>
           <ServiceCard
@@ -180,13 +187,13 @@ export default function Page() {
 
       {/* LOCAL SEO COPY WITH INTERNAL LINKS */}
       <section className="container-x py-12">
-        <div className="prose">
+        <div className="prose max-w-none prose-headings:text-ink prose-p:text-ink prose-strong:text-ink$1">
           <h2>
             Calgary Popcorn Ceiling Removal, Drywall, and Painting — Done Right
           </h2>
           <p>
             We help {city} homeowners modernize their spaces with{" "}
-            <Link href="/services/popcorn-ceiling-removal-calgary/" className="link-primary">
+            <Link href="/services/popcorn/" className="link-primary">
               popcorn ceiling removal
             </Link>
             ,{" "}
@@ -284,9 +291,7 @@ export default function Page() {
           {neighbourhoods.map((n) => (
             <Link
               key={n}
-              href={`/service-areas/popcorn-ceiling-removal/calgary/${toSlug(
-                n
-              )}/`}
+              href={`/calgary/${toSlug(n)}`}
               className="rounded-xl border px-3 py-2 text-sm text-ink transition hover:bg-red-50 hover:border-red-200"
             >
               {n}
