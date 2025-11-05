@@ -9,7 +9,7 @@ export const SITE = {
   phone: "(825) 365-3770",
   phoneHref: "tel:+18253653770",
   city: "Calgary, AB",
-  domain: "https://popcornceilingremovalcalgary.com", //https://your-domain.example
+  domain: "https://popcornceilingremovalcalgary.com", //https://popcornceilingremovalcalgary.com
   description:
     "Popcorn ceiling removal, drywall installation & repair, wallpaper removal, and interior painting in Calgary. Clean, fast, professional results.",
   hours: "Mon–Sat 8am–6pm",
@@ -19,4 +19,4 @@ export const SITE = {
     facebook: "https://www.facebook.com/share/19zYcz9Mdh/?mibextid=wwXIfr",
   },
 };
-//here you can change phone number 
+//here you can change phone number
