@@ -9,7 +9,8 @@
         "cf:build": "npx @cloudflare/next-on-pages",
         "cf:preview": "npx wrangler pages dev .vercel/output/static",
         "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+        "postbuild": "next-sitemap"
     },
     "dependencies": {
         "next": "14.2.5",
@@ -23,6 +24,7 @@
         "@types/node": "20.11.19",
         "@types/react": "18.2.44",
         "autoprefixer": "10.4.18",
+        "next-sitemap": "^4.2.3",
         "postcss": "8.4.38",
         "tailwindcss": "3.4.3",
         "typescript": "5.4.5",
