@@ -27,6 +27,8 @@ export const SITE = {
   },
   phone: "(825) 365-3770",
   phoneHref: "tel:+18253653770",
+  email: "info@popcornceilingremovalcalgary.com",
+  emailHref: "mailto:info@popcornceilingremovalcalgary.com",
   city: "Calgary, AB",
   domain: "https://popcornceilingremovalcalgary.com", //https://popcornceilingremovalcalgary.com
   description:

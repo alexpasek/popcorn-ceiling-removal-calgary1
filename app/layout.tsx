@@ -49,6 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       country: "",
     };
   const geo: Geo = SITE.geo ?? {};
+  const email = SITE.email || "";
+  const emailHref = SITE.emailHref || (email ? `mailto:${email}` : "");
   const sameAs = Object.values(SITE.socials || {}).filter(Boolean);
   const areaServed = (SITE.serviceAreas || []).map((name) => ({
     "@type": "Place",
@@ -64,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     image: `${SITE.domain}/logo.jpg`,
     telephone: SITE.phoneHref.replace("tel:+", "+"),
     priceRange: SITE.priceRange,
+    email: email || undefined,
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street,
@@ -92,6 +95,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       ratingValue: "4.9",
       reviewCount: "87",
     },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: SITE.phoneHref.replace("tel:+", "+"),
+        email: email || undefined,
+        areaServed: "CA-AB",
+        availableLanguage: ["en"],
+      },
+    ],
   };
 
   const serviceSchema = {

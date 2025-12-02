@@ -117,6 +117,33 @@ export default function Footer() {
               </span>
             </span>
           </a>
+          {/* Email */}
+          {SITE.emailHref && (
+            <a
+              href={SITE.emailHref}
+              className="group mt-3 inline-flex items-center gap-3 rounded-2xl border px-4 py-3 shadow-sm transition hover:shadow-md"
+              style={{
+                background: `linear-gradient(90deg, #fff, ${tint10})`,
+                borderColor: border20,
+              }}
+            >
+              <span
+                className="flex h-9 w-9 items-center justify-center rounded-xl text-white transition group-hover:scale-105"
+                style={{ background: accent }}
+              >
+                <EnvelopeIcon className="h-4 w-4" />
+              </span>
+              <span className="leading-tight text-ink">
+                <span
+                  className="block text-[11px] uppercase tracking-wide"
+                  style={{ color: accent, opacity: 0.85 }}
+                >
+                  Email
+                </span>
+                <span className="block text-sm font-semibold">{SITE.email}</span>
+              </span>
+            </a>
+          )}
         </div>
 
         {/* Right column: blurb + copyright + centered 3D socials */}
@@ -181,6 +208,17 @@ function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.54.57 1 1 0 011 1v3.67a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.67a1 1 0 011 1 11.36 11.36 0 00.57 3.54 1 1 0 01-.21 1.11l-2.41 2.14z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function EnvelopeIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M3 6.75A2.75 2.75 0 015.75 4h12.5A2.75 2.75 0 0121 6.75v10.5A2.75 2.75 0 0118.25 20H5.75A2.75 2.75 0 013 17.25V6.75zm2.17-.75a.25.25 0 00-.17.07V6.2l7 5.6 7-5.6v-.13a.25.25 0 00-.17-.07H5.17zm13.48 2.44l-5.9 4.72a1 1 0 01-1.26 0L5.6 8.44v8.81c0 .14.11.25.25.25h12.3c.14 0 .25-.11.25-.25V8.44z"
         fill="currentColor"
       />
     </svg>

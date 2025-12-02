@@ -43,6 +43,8 @@ export default function Page() {
       country: "",
     };
   const serviceAreas = SITE.serviceAreas || ["Calgary, AB"];
+  const email = SITE.email || "info@popcornceilingremovalcalgary.com";
+  const emailHref = SITE.emailHref || `mailto:${email}`;
 
   const contactLd = {
     "@context": "https://schema.org",
@@ -54,6 +56,7 @@ export default function Page() {
       url: SITE.domain,
       areaServed: serviceAreas.map((name) => ({ "@type": "Place", name })),
       telephone: phoneHref.replace("tel:+", "+"),
+      email,
       address: {
         "@type": "PostalAddress",
         streetAddress: address.street,
@@ -67,6 +70,7 @@ export default function Page() {
         {
           "@type": "ContactPoint",
           telephone: phoneHref.replace("tel:+", "+"),
+          email,
           contactType: "sales",
           areaServed: "CA-AB",
           availableLanguage: ["en"],
@@ -103,6 +107,12 @@ export default function Page() {
               <span className="font-semibold">Phone:</span>{" "}
               <a href={phoneHref} className="link-primary">
                 {phone}
+              </a>
+            </div>
+            <div>
+              <span className="font-semibold">Email:</span>{" "}
+              <a href={emailHref} className="link-primary">
+                {email}
               </a>
             </div>
             <div>
