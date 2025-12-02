@@ -1,6 +1,25 @@
 export const SITE = {
   brand: "Popcorn Ceiling Removal Calgary",
   accent: "#E31B23",
+  priceRange: "$$",
+  address: {
+    street: "220 Southpoint Greenway SW",
+    city: "Airdrie",
+    region: "AB",
+    postalCode: "T4B 5P4",
+    country: "CA",
+  },
+  geo: {
+    lat: 51.292,
+    lng: -114.014,
+  },
+  serviceAreas: [
+    "Calgary, AB",
+    "Airdrie, AB",
+    "Chestermere, AB",
+    "Cochrane, AB",
+    "Okotoks, AB",
+  ],
   socials: {
     instagram:
       "https://www.instagram.com/popcornceilingremovalcalgary?igsh=Z3ducnhvdnAxeXl2&utm_source=qr",

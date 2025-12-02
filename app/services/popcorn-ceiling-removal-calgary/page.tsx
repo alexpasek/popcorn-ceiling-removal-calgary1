@@ -13,7 +13,7 @@ export const metadata = {
       "Multi‑step popcorn removal with clean prep, dust control, and Level 5 smooth options. Serving all Calgary neighbourhoods.",
     type: "article",
   },
-  alternates: { canonical: "/services/popcorn/" },
+  alternates: { canonical: "/services/popcorn-ceiling-removal-calgary" },
 };
 
 const IMAGES = [

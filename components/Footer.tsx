@@ -4,8 +4,8 @@ import { SITE } from "@/data/site";
 export default function Footer() {
   const year = new Date().getFullYear();
 
-  // Address
-  const addr = {
+  // Address (shared for SEO + map link)
+  const addr = SITE.address || {
     street: "220 Southpoint Greenway SW",
     city: "Airdrie",
     region: "AB",

@@ -6,6 +6,24 @@ import ServiceCard from "@/components/ServiceCard";
 import NeighborhoodGrid from "@/components/NeighborhoodGrid";
 import { SITE } from "@/data/site";
 
+export const metadata = {
+  title: "Popcorn Ceiling Removal Calgary | Smooth, Dust-Controlled Ceilings",
+  description: SITE.description,
+  alternates: { canonical: SITE.domain },
+  openGraph: {
+    title: "Popcorn Ceiling Removal Calgary",
+    description: SITE.description,
+    url: SITE.domain,
+    type: "website",
+    locale: "en_CA",
+  },
+  twitter: {
+    card: "summary",
+    title: "Popcorn Ceiling Removal Calgary",
+    description: SITE.description,
+  },
+};
+
 
 // Shared CTA styles (match front page brand buttons)
 const BTN =
@@ -22,9 +40,27 @@ export default function Page() {
   const aggregate = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${SITE.domain}/#business`,
     name: brand,
+    url: SITE.domain,
     telephone: phone,
-    areaServed: `${city}, AB`,
+    image: `${SITE.domain}/logo.jpg`,
+    priceRange: SITE.priceRange,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE?.address?.street,
+      addressLocality: SITE?.address?.city,
+      addressRegion: SITE?.address?.region,
+      postalCode: SITE?.address?.postalCode,
+      addressCountry: SITE?.address?.country,
+    },
+    geo:
+      SITE?.geo && typeof SITE.geo.lat === "number" && typeof SITE.geo.lng === "number"
+        ? { "@type": "GeoCoordinates", latitude: SITE.geo.lat, longitude: SITE.geo.lng }
+        : undefined,
+    areaServed: (SITE?.serviceAreas || []).map((name) => ({ "@type": "Place", name })),
+    sameAs: Object.values(SITE?.socials || {}).filter(Boolean),
+    openingHours: "Mo-Sa 08:00-18:00",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
