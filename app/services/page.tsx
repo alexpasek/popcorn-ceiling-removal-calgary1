@@ -1,5 +1,24 @@
 import Link from 'next/link';
-export const metadata = { title: 'Services | Popcorn Ceiling Removal Calgary' };
+
+export const metadata = {
+  title: 'Services | Popcorn Ceiling Removal Calgary',
+  description:
+    'Explore services in Calgary: popcorn ceiling removal, drywall installation and repair, wallpaper removal, interior painting, and knockdown ceiling repair.',
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Services | Popcorn Ceiling Removal Calgary',
+    description:
+      'Calgary services: popcorn ceiling removal, drywall installation & repair, wallpaper removal, interior painting, and knockdown ceiling repair.',
+    type: 'website',
+    url: 'https://popcornceilingremovalcalgary.com/services',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Services | Popcorn Ceiling Removal Calgary',
+    description:
+      'Popcorn ceiling removal, drywall, painting, wallpaper removal, and knockdown repair across Calgary.',
+  },
+};
 const items = [
   {
     title: "Popcorn Ceiling Removal",

@@ -36,6 +36,7 @@ export default function Page() {
   const phone = SITE?.phone || "+1 (825) 365‑3770";
   const brand = SITE?.brand || "Popcorn Ceiling Removal Calgary";
   const city = SITE?.city || "Calgary";
+  const serviceAreas = SITE?.serviceAreas || ["Calgary, AB"];
 
   const aggregate = {
     "@context": "https://schema.org",
@@ -268,6 +269,29 @@ export default function Page() {
             </li>
           </ul>
         </div>
+      </section>
+
+      {/* SERVICE AREAS / INTERNAL LINKS */}
+      <section className="container-x py-12">
+        <h2 className="text-2xl font-bold text-ink">Serving Calgary & Nearby</h2>
+        <p className="mt-2 max-w-3xl text-muted">
+          Local crew for popcorn ceiling removal, drywall repair/installation,
+          and painting. Quick response across inner city and suburbs.
+        </p>
+        <div className="mt-4 grid gap-2 sm:grid-cols-3 lg:grid-cols-4">
+          {neighbourhoods.slice(0, 12).map((n) => (
+            <Link
+              key={n}
+              href={`/calgary/${toSlug(n)}`}
+              className="rounded-lg border bg-white px-3 py-2 text-sm text-ink shadow-sm hover:border-red-500 hover:text-red-600 transition"
+            >
+              {n}
+            </Link>
+          ))}
+        </div>
+        <p className="mt-4 text-sm text-muted">
+          Also serving: {serviceAreas.join(", ")}.
+        </p>
       </section>
 
       {/* PROCESS CARDS */}
