@@ -6,6 +6,19 @@ import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 import { SITE } from "@/data/site";
 
+type Address = {
+  street: string;
+  city: string;
+  region: string;
+  postalCode: string;
+  country: string;
+};
+
+type Geo = {
+  lat?: number;
+  lng?: number;
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: "Popcorn Ceiling Removal Calgary | Drywall Installation & Painting",
@@ -27,8 +40,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const address = SITE.address || {};
-  const geo = SITE.geo || {};
+  const address: Address =
+    SITE.address ?? {
+      street: "",
+      city: "",
+      region: "",
+      postalCode: "",
+      country: "",
+    };
+  const geo: Geo = SITE.geo ?? {};
   const sameAs = Object.values(SITE.socials || {}).filter(Boolean);
   const areaServed = (SITE.serviceAreas || []).map((name) => ({
     "@type": "Place",
