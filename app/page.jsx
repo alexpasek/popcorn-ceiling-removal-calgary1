@@ -88,13 +88,6 @@ export default function Page() {
     })),
     sameAs: Object.values(SITE?.socials || {}).filter(Boolean),
     openingHours: "Mo-Sa 08:00-18:00",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "92",
-      bestRating: "5",
-      worstRating: "1",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Ceiling Services",
