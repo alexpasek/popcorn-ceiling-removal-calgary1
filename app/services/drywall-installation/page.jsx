@@ -229,27 +229,13 @@ export default function Page() {
                 Licensed & Insured Drywall Contractor
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                Professional Drywall Installation
-                <br />
-                <span className="text-red-600">Services in Calgary</span>
+                Expert Drywall Installation<br />
+                <span className="text-red-600">in Calgary</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
-                Expert{" "}
-                <strong className="text-gray-900">
-                  drywall installation contractor
-                </strong>{" "}
-                providing{" "}
-                <strong className="text-gray-900">
-                  basement drywall installation
-                </strong>
-                ,{" "}
-                <strong className="text-gray-900">
-                  ceiling drywall installation
-                </strong>
-                , <strong className="text-gray-900">drywall hanging</strong>,
-                and complete{" "}
-                <strong className="text-gray-900">drywall finishing</strong>{" "}
-                services.
+                Professional drywall contractors serving Calgary homes and businesses. 
+                From basement finishing to complete renovations, we deliver quality craftsmanship 
+                with transparent pricing and guaranteed results.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <a href={phoneHref} className={BTN + " text-lg px-8 py-4"}>
@@ -334,20 +320,69 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICES GRID - COMPREHENSIVE */}
+      {/* WHY CHOOSE US */}
       <section className="container-x py-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Complete Drywall Installation Services
+            Why Choose Us for Your Drywall Project
           </h2>
           <p className="text-lg text-gray-600">
-            Professional <strong>drywall contractor</strong> for residential and
-            commercial projects. From <strong>drywall hanging</strong> to{" "}
-            <strong>Level 5 drywall finish</strong>.
+            We're not just another drywall company. Here's what sets us apart.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+        <div className="grid gap-8 md:grid-cols-3 mb-12">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Licensed & Insured</h3>
+            <p className="text-gray-600">
+              Fully licensed and insured for your peace of mind. We follow all Calgary building codes and safety standards.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Transparent Pricing</h3>
+            <p className="text-gray-600">
+              No hidden fees or surprise charges. Get a detailed quote upfront so you know exactly what to expect.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Craftsmanship</h3>
+            <p className="text-gray-600">
+              We take pride in our work. From Level 4 to premium Level 5 finishes, we deliver results that last.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES GRID - COMPREHENSIVE */}
+      <section className="bg-gray-50 py-16">
+        <div className="container-x">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Drywall Services
+            </h2>
+            <p className="text-lg text-gray-600">
+              Whether it's a small repair or a complete basement renovation, we've got you covered.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Basement Drywall */}
           <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
             <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
@@ -366,12 +401,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Basement Drywall Installation
+              Basement Drywall
             </h3>
             <p className="text-gray-600 mb-4">
-              Expert <strong>basement drywall installation</strong> for basement
-              development, renovations, and new builds. Moisture-resistant
-              materials and proper vapor barriers.
+              Transform your basement into usable living space. We handle everything from framing to finishing with moisture-resistant materials and proper vapor barriers.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -437,12 +470,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Ceiling Drywall Installation
+              Ceiling Drywall
             </h3>
             <p className="text-gray-600 mb-4">
-              Professional <strong>ceiling drywall installation</strong> and{" "}
-              <strong>hang drywall</strong> services. Smooth ceilings, knockdown
-              texture, or Level 5 ultra-smooth finish.
+              Fresh ceiling installation or repairs. Choose from smooth finishes, knockdown texture, or our premium Level 5 ultra-smooth finish.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -508,13 +539,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Drywall Finishing Services
+              Drywall Finishing
             </h3>
             <p className="text-gray-600 mb-4">
-              Complete <strong>drywall taping and mudding</strong>,{" "}
-              <strong>drywall sanding</strong>, and finishing.{" "}
-              <strong>Level 4 drywall finish</strong> and{" "}
-              <strong>Level 5 drywall finish</strong> available.
+              Professional taping, mudding, and sanding services. We offer both standard Level 4 finish and premium Level 5 smooth finish for high-end projects.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -580,13 +608,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Garage & Home Additions
+              Garage & Additions
             </h3>
             <p className="text-gray-600 mb-4">
-              <strong>Garage drywall installation</strong>,{" "}
-              <strong>drywall installation for additions</strong>, bathroom and
-              kitchen drywall. Professional{" "}
-              <strong>gypsum board installation</strong>.
+              Garage, bathroom, and kitchen drywall for renovations and additions. Fire-rated materials where required by code.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -652,13 +677,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Commercial Drywall Installation
+              Commercial Projects
             </h3>
             <p className="text-gray-600 mb-4">
-              <strong>Commercial drywall installation</strong>,{" "}
-              <strong>office drywall installation</strong>, and{" "}
-              <strong>drywall installation for commercial buildouts</strong>.
-              Licensed commercial contractor.
+              Office spaces, retail buildouts, and tenant improvements. Licensed for commercial work with proper permits and inspections.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -724,14 +746,10 @@ export default function Page() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Residential Drywall Installation
+              Residential Projects
             </h3>
             <p className="text-gray-600 mb-4">
-              <strong>Residential drywall installation</strong> for homes and
-              condos.
-              <strong>Condo drywall installation</strong>,{" "}
-              <strong>sheetrock installation</strong>, and{" "}
-              <strong>drywall replacement</strong> services.
+              Whole-home drywall for houses and condos. New construction, renovations, and repairs done right the first time.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
@@ -779,6 +797,7 @@ export default function Page() {
             </ul>
           </div>
         </div>
+        </div>
       </section>
 
       {/* GALLERY */}
@@ -786,11 +805,10 @@ export default function Page() {
         <div className="container-x">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Professional Drywall Installation Work
+              Recent Projects
             </h2>
             <p className="text-lg text-gray-600">
-              Recent <strong>drywall hanging</strong> and finishing projects in
-              Calgary
+              See our quality workmanship in action
             </p>
           </div>
           <ServiceGallery images={IMAGES} />
@@ -838,20 +856,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SEO-RICH CONTENT SECTION */}
+      {/* ABOUT US - SEO CONTENT */}
       <section className="container-x py-16">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-li:text-gray-700">
-            <h2>Calgary's Trusted Drywall Installation Contractor</h2>
+            <h2>About Our Drywall Company</h2>
             <p>
-              Looking for reliable{" "}
-              <strong>professional drywall installation services</strong> in
-              Calgary? Our expert{" "}
-              <strong>drywall contractors for installation</strong> deliver
-              quality workmanship for residential and commercial projects. From{" "}
-              <strong>basement drywall installation</strong> to complete home
-              renovations, we're your trusted <strong>drywall installer</strong>
-              . We also specialize in{" "}
+              We're a professional drywall installation contractor serving Calgary and surrounding areas. From basement finishing to complete home renovations, our licensed and insured team delivers quality craftsmanship you can trust. We also specialize in{" "}
               <Link
                 href="/"
                 className="text-red-600 font-semibold hover:text-red-700 transition"
@@ -861,105 +872,55 @@ export default function Page() {
               .
             </p>
 
-            <h3>Comprehensive Drywall Installation Services</h3>
+            <h3>What We Do</h3>
             <p>
-              Whether you need to <strong>hang drywall</strong> for a new
-              basement, require <strong>ceiling drywall installation</strong>,
-              or want to <strong>install new drywall</strong> during a
-              renovation, our <strong>licensed drywall installer</strong> team
-              handles it all. We specialize in:
+              Whether you need drywall for a new basement, ceiling repairs, or a complete home renovation, our experienced installers handle it all:
             </p>
             <ul>
               <li>
-                <strong>Basement drywall installation</strong> — Complete
-                basement finishing with moisture-resistant materials, proper
-                insulation, and vapor barriers
+                <strong>Basement Projects</strong> — Complete basement finishing with moisture-resistant materials, proper insulation, and vapor barriers
               </li>
               <li>
-                <strong>Ceiling drywall installation</strong> — Expert{" "}
-                <strong>drywall board installation</strong> and{" "}
-                <strong>drywall sheet installation</strong> for smooth or
-                textured finishes
+                <strong>Ceiling Work</strong> — New ceilings, repairs, and finishing with smooth or textured options
               </li>
               <li>
-                <strong>Garage drywall installation</strong> — Fire-rated{" "}
-                <strong>sheetrock installation</strong> and code-compliant{" "}
-                <strong>wallboard installation</strong>
+                <strong>Garage & Additions</strong> — Fire-rated materials and code-compliant installations for garages, bathrooms, and kitchens
               </li>
               <li>
-                <strong>Commercial drywall installation</strong> —{" "}
-                <strong>Office drywall installation</strong> and{" "}
-                <strong>drywall installation for commercial buildouts</strong>
+                <strong>Commercial Work</strong> — Office spaces, retail buildouts, and tenant improvements with proper permits
               </li>
               <li>
-                <strong>Residential drywall installation</strong> — Whole-home
-                projects including{" "}
-                <strong>bathroom drywall installation</strong> and{" "}
-                <strong>kitchen drywall installation</strong>
+                <strong>Residential Projects</strong> — Whole-home installations, renovations, and repairs for houses and condos
               </li>
             </ul>
 
-            <h3>Expert Drywall Hanging & Installation</h3>
+            <h3>Our Installation Process</h3>
             <p>
-              Our professional <strong>drywall hanging</strong> service ensures
-              properly installed <strong>gypsum board installation</strong> with
-              correct fastening patterns and spacing. We handle{" "}
-              <strong>drywall installation for renovation</strong>,{" "}
-              <strong>drywall installation for remodeling</strong>, and{" "}
-              <strong>new drywall installation</strong> for additions and new
-              construction.
-            </p>
-            <p>
-              Need to <strong>remove and replace drywall</strong>? We provide
-              complete <strong>drywall replacement</strong> services including{" "}
-              <strong>drywall installation after demolition</strong>, perfect
-              for water damage repairs or layout changes.
+              We follow industry best practices for every project. Our professional installation service ensures properly installed boards with correct fastening patterns and spacing. We handle new construction, renovations, and repairs including water damage fixes.
             </p>
 
-            <h3>Professional Drywall Finishing</h3>
+            <h3>Finishing Services</h3>
             <p>
-              Beyond <strong>drywall board installation</strong>, we provide
-              expert <strong>drywall finishing</strong> including:
+              Beyond installation, we provide expert finishing services including:
             </p>
             <ul>
               <li>
-                <strong>Drywall taping and mudding</strong> — Precise tape
-                application and multiple mud coats for seamless joints
+                <strong>Taping & Mudding</strong> — Precise tape application and multiple mud coats for seamless joints
               </li>
               <li>
-                <strong>Drywall sanding</strong> — Dust-controlled sanding for
-                smooth, paint-ready surfaces
+                <strong>Sanding</strong> — Dust-controlled sanding for smooth, paint-ready surfaces
               </li>
               <li>
-                <strong>Level 4 drywall finish</strong> — Standard smooth finish
-                suitable for flat paint and light textures
+                <strong>Level 4 Finish</strong> — Standard smooth finish suitable for flat paint and light textures
               </li>
               <li>
-                <strong>Level 5 drywall finish</strong> — Ultra-smooth premium
-                finish with <strong>skim coat after drywall</strong> for
-                high-end applications
+                <strong>Level 5 Finish</strong> — Ultra-smooth premium finish with skim coat for high-end applications
               </li>
             </ul>
 
-            <h3>Licensed & Insured Drywall Contractor</h3>
+            <h3>Why We're Different</h3>
             <p>
-              As a <strong>licensed drywall installer</strong> and{" "}
-              <strong>insured drywall contractor</strong>, we follow all Calgary
-              building codes and safety standards. Our{" "}
-              <strong>drywall contractors for installation</strong> are
-              experienced professionals who deliver quality results on time and
-              on budget.
-            </p>
-
-            <h3>Residential & Commercial Projects</h3>
-            <p>
-              We provide <strong>residential drywall installation</strong> for
-              homes and <strong>condo drywall installation</strong>, as well as{" "}
-              <strong>commercial drywall installation</strong> for businesses.
-              Our services include{" "}
-              <strong>drywall installation for additions</strong>, whole-home
-              renovations, and{" "}
-              <strong>drywall installation for commercial buildouts</strong>.
+              As a licensed and insured contractor, we follow all Calgary building codes and safety standards. Our experienced team delivers quality results on time and on budget, whether it's a small repair or a large commercial project.
             </p>
           </div>
         </div>
@@ -1167,12 +1128,10 @@ export default function Page() {
       <section className="container-x py-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Professional Drywall Installation Process
+            How It Works
           </h2>
           <p className="text-lg text-gray-600">
-            Proven <strong>drywall hanging</strong> and finishing process from
-            Calgary's expert{" "}
-            <strong>drywall contractors for installation</strong>
+            Our simple 6-step process from quote to completion
           </p>
         </div>
 
@@ -1321,21 +1280,15 @@ export default function Page() {
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Drywall Installation Services Across Calgary
+              Serving All of Calgary
             </h2>
             <p className="text-lg text-gray-600">
-              Professional <strong>drywall installer</strong> serving all
-              Calgary neighborhoods.
-              <strong>Licensed drywall contractor</strong> for residential and
-              commercial projects.
+              Professional drywall services throughout Calgary and surrounding areas
             </p>
           </div>
           <div className="prose prose-lg max-w-4xl mx-auto text-center">
             <p className="text-gray-700">
-              We provide <strong>basement drywall installation</strong>,{" "}
-              <strong>ceiling drywall installation</strong>, and complete{" "}
-              <strong>drywall installation services</strong> throughout Calgary
-              including: Beltline, Kensington, Hillhurst, Sunnyside, Bridgeland,
+              We provide complete drywall installation and finishing services throughout Calgary including: Beltline, Kensington, Hillhurst, Sunnyside, Bridgeland,
               Inglewood, Mission, Marda Loop, Altadore, Mount Royal, Signal
               Hill, West Springs, Tuscany, Arbour Lake, Varsity, Brentwood,
               Bowness, Panorama Hills, Evergreen, Shawnessy, Somerset, Mahogany,
@@ -1351,16 +1304,10 @@ export default function Page() {
         <div className="container-x">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready for Professional Drywall Installation?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              <strong className="text-white">Licensed drywall installer</strong>{" "}
-              and{" "}
-              <strong className="text-white">insured drywall contractor</strong>{" "}
-              serving Calgary. Expert{" "}
-              <strong className="text-white">drywall hanging</strong>,{" "}
-              <strong className="text-white">drywall finishing</strong>, and
-              complete installation services.
+              Licensed and insured drywall contractor serving Calgary. Get your free quote today—no obligation, no pressure.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-10 text-left">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
