@@ -5,23 +5,46 @@ import { SITE } from "@/data/site";
 
 export const metadata = {
   title:
-    "Drywall Installation & Repair in Calgary — Smooth, Paint‑Ready Results",
+    "Professional Drywall Installation Calgary | Licensed Drywall Contractor",
   description:
-    "Drywall installation and repair in Calgary: basements, ceilings, water damage, patch & match, taping, mudding, sanding, and Level 5 smooth finishes. Same‑week quotes and clean dust control.",
+    "Expert drywall contractor in Calgary. Basement, ceiling & commercial installation. Licensed installer. Level 5 finish. Free quote (825) 365-3770.",
+  keywords:
+    "drywall installation Calgary, drywall contractor, professional drywall installation, drywall installer, drywall hanging, basement drywall installation, ceiling drywall installation, drywall finishing, drywall taping and mudding",
   openGraph: {
     title:
-      "Drywall Installation & Repair in Calgary — Smooth, Paint‑Ready Results",
+      "Professional Drywall Installation Calgary | Licensed Drywall Contractor",
     description:
-      "Drywall pros serving all Calgary neighbourhoods. Clean prep, dust control, smooth finishes, and on‑time results.",
+      "Expert drywall installation contractor serving Calgary. Basement drywall, ceiling installation, drywall hanging, finishing & Level 5 smooth.",
     type: "article",
+    images: [
+      {
+        url: `${SITE.domain}/images/services/drywall/1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Professional drywall installation Calgary",
+      },
+    ],
   },
-  alternates: { canonical: "/services/drywall/" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Drywall Installation Calgary",
+    description:
+      "Licensed drywall contractor. Expert drywall installation services for residential & commercial.",
+  },
+  alternates: { canonical: `${SITE.domain}/services/drywall-installation/` },
 };
 
 const IMAGES = [
   "/images/services/drywall/1.jpg",
   "/images/services/drywall/2.jpg",
   "/images/services/drywall/3.jpg",
+];
+
+// Image alt texts for SEO
+const IMAGE_ALTS = [
+  "Professional basement drywall installation Calgary - finished walls with Level 5 smooth finish",
+  "Expert ceiling drywall installation Calgary - taping and mudding in progress", 
+  "Commercial drywall contractor Calgary - office buildout installation complete",
 ];
 
 // Shared CTA styles to match front page (brand red buttons)
@@ -39,10 +62,78 @@ export default function Page() {
   const jsonLdService = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Drywall Installation & Repair",
-    serviceType: "Drywall services",
-    areaServed: { "@type": "City", name: "Calgary" },
-    provider: { "@type": "LocalBusiness", name: brand, telephone: phone },
+    name: "Professional Drywall Installation Services",
+    serviceType: "Drywall Installation",
+    description:
+      "Professional drywall installation contractor providing expert drywall hanging, basement drywall installation, ceiling drywall installation, drywall finishing, taping and mudding services in Calgary.",
+    areaServed: {
+      "@type": "City",
+      name: "Calgary",
+      "@id": "https://en.wikipedia.org/wiki/Calgary",
+    },
+    provider: {
+      "@type": "LocalBusiness",
+      name: brand,
+      telephone: phone,
+      image: `${SITE.domain}/logo.jpg`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Calgary",
+        addressRegion: "AB",
+        addressCountry: "CA",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 51.0447,
+        longitude: -114.0719,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Drywall Installation Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Basement Drywall Installation",
+            description:
+              "Professional basement drywall installation with moisture-resistant materials",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Ceiling Drywall Installation",
+            description:
+              "Expert ceiling drywall installation and hanging services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Drywall Finishing",
+            description:
+              "Professional drywall taping, mudding, and Level 5 finish services",
+          },
+        },
+      ],
+    },
   };
 
   const jsonLdFAQ = {
@@ -51,49 +142,65 @@ export default function Page() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How quickly can you start my drywall project in Calgary?",
+        name: "What drywall installation services do you offer in Calgary?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most small and medium drywall repairs can be scheduled within a few days. Full installations are typically booked within 1–2 weeks, depending on scope.",
+          text: "We provide comprehensive drywall installation services including basement drywall installation, ceiling drywall installation, garage drywall installation, residential and commercial drywall installation. Our professional drywall contractor services include drywall hanging, sheetrock installation, drywall taping and mudding, and Level 5 drywall finish.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you control dust during sanding?",
+        name: "How much does drywall installation cost in Calgary?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. We protect floors and furniture and use smart dust‑control practices. We sand to a smooth, paint‑ready finish.",
+          text: "Drywall installation cost varies by project size and complexity. Basic drywall hanging starts around $2-3 per sq ft, while complete drywall installation with taping, mudding, and Level 4 finish ranges $4-6 per sq ft. Level 5 drywall finish adds $1-2 per sq ft. Contact us for a free drywall installation quote.",
         },
       },
       {
         "@type": "Question",
-        name: "Can you match existing textures and corners?",
+        name: "Are you a licensed and insured drywall contractor?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Absolutely. We handle knockdown, orange peel, and smooth finishes, plus crisp corners with beads where needed.",
+          text: "Yes, we are a licensed drywall installer and fully insured drywall contractor serving Calgary. Our professional drywall installation team follows all safety standards and building codes for residential and commercial projects.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you paint after drywall?",
+        name: "How long does drywall installation take?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we can prime and paint after drywall so you get one clean, continuous finish.",
+          text: "Timeline depends on project scope. Small room drywall installation takes 1-2 days. Basement drywall installation typically requires 3-5 days for hanging, taping, mudding, and drying. Complete drywall installation for renovation or new construction takes 5-10 days including finishing.",
         },
       },
       {
         "@type": "Question",
-        name: "Is a permit required?",
+        name: "Do you offer drywall finishing services?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Small repairs usually don’t need permits. For larger renovations or basement developments, we follow local rules and can coordinate if needed.",
+          text: "Yes, we provide complete drywall finishing including drywall taping and mudding, drywall sanding, Level 4 drywall finish, and Level 5 drywall finish. We also offer skim coat after drywall for ultra-smooth surfaces ready for paint.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you install drywall for basement renovations?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. Basement drywall installation is one of our specialties. We handle drywall installation for renovation, drywall installation after demolition, and new drywall installation for basement development projects with proper moisture barriers.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you do commercial drywall installation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we provide both residential drywall installation and commercial drywall installation. Our services include office drywall installation, drywall installation for commercial buildouts, and drywall installation for additions.",
         },
       },
     ],
   };
 
   return (
-    <section className="container-x py-12">
+    <>
       {/* JSON-LD for Service + FAQ */}
       <Script id="drywall-service-ld" type="application/ld+json">
         {JSON.stringify(jsonLdService)}
@@ -102,233 +209,1231 @@ export default function Page() {
         {JSON.stringify(jsonLdFAQ)}
       </Script>
 
-      {/* HERO */}
-      <div className="relative overflow-hidden rounded-3xl border bg-white shadow-sm">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-indigo-50/70 via-white to-white" />
-        <div className="px-6 py-10 md:px-10 md:py-14">
-          <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium text-ink/70">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />{" "}
-            Same‑week quotes • Dust control • Level 5 smooth
-          </p>
-          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-ink md:text-4xl">
-            Drywall Installation &amp; Repair in {city}
-          </h1>
-          <p className="mt-3 max-w-2xl text-base text-muted md:text-lg">
-            Clean prep, straight boards, tight seams, careful sanding, and a
-            smooth, paint‑ready finish. From small patches to full room installs
-            — we make walls and ceilings look brand new.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href={phoneHref} className={BTN}>
-              Call {phone}
-            </a>
-            <Link href="/quote/" className={BTN}>
-              Get a fast quote
-            </Link>
-            <span className="text-xs text-muted">
-              No pressure • Straight pricing • Clean job
-            </span>
+      {/* HERO SECTION - MODERN */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-gray-50 py-16">
+        <div className="container-x">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 rounded-full bg-red-100 border border-red-200 px-4 py-2 text-sm font-semibold text-red-700 mb-6">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Licensed & Insured Drywall Contractor
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                Professional Drywall Installation
+                <br />
+                <span className="text-red-600">Services in Calgary</span>
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+                Expert{" "}
+                <strong className="text-gray-900">
+                  drywall installation contractor
+                </strong>{" "}
+                providing{" "}
+                <strong className="text-gray-900">
+                  basement drywall installation
+                </strong>
+                ,{" "}
+                <strong className="text-gray-900">
+                  ceiling drywall installation
+                </strong>
+                , <strong className="text-gray-900">drywall hanging</strong>,
+                and complete{" "}
+                <strong className="text-gray-900">drywall finishing</strong>{" "}
+                services.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <a href={phoneHref} className={BTN + " text-lg px-8 py-4"}>
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  Call {phone}
+                </a>
+                <Link href="/quote/" className={BTN + " text-lg px-8 py-4"}>
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                  Get Free Quote
+                </Link>
+              </div>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-red-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Licensed Drywall Installer
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-red-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Fully Insured
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-red-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Level 5 Finish Available
+                </span>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* QUICK HIGHLIGHTS */}
-        <div className="grid gap-3 border-t bg-white/70 p-4 md:grid-cols-3 md:p-6">
-          {[
-            {
-              title: "Repairs & Patch‑Match",
-              desc: "Water damage, cracks, dents, bad seams, corners.",
-            },
-            {
-              title: "Installations",
-              desc: "Basements, ceilings, partitions, bulkheads, features.",
-            },
-            {
-              title: "Prime & Paint",
-              desc: "Optional finishing for one continuous result.",
-            },
-          ].map((card, i) => (
-            <div key={i} className="rounded-2xl border bg-white p-4 shadow-sm">
-              <div className="flex items-start gap-3">
-                <svg
-                  className="mt-1 h-5 w-5 flex-none"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+      {/* SERVICES GRID - COMPREHENSIVE */}
+      <section className="container-x py-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Complete Drywall Installation Services
+          </h2>
+          <p className="text-lg text-gray-600">
+            Professional <strong>drywall contractor</strong> for residential and
+            commercial projects. From <strong>drywall hanging</strong> to{" "}
+            <strong>Level 5 drywall finish</strong>.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          {/* Basement Drywall */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  aria-hidden
+                  strokeWidth={2}
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Basement Drywall Installation
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Expert <strong>basement drywall installation</strong> for basement
+              development, renovations, and new builds. Moisture-resistant
+              materials and proper vapor barriers.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
                 >
-                  <path d="M20 6L9 17l-5-5" />
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
-                <div>
-                  <h3 className="text-base font-semibold text-ink">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-muted">{card.desc}</p>
+                Drywall installation for renovation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                New drywall installation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Drywall installation after demolition
+              </li>
+            </ul>
+          </div>
+
+          {/* Ceiling Drywall */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Ceiling Drywall Installation
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Professional <strong>ceiling drywall installation</strong> and{" "}
+              <strong>hang drywall</strong> services. Smooth ceilings, knockdown
+              texture, or Level 5 ultra-smooth finish.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Drywall board installation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Drywall sheet installation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Remove and replace drywall
+              </li>
+            </ul>
+          </div>
+
+          {/* Drywall Finishing */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Drywall Finishing Services
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Complete <strong>drywall taping and mudding</strong>,{" "}
+              <strong>drywall sanding</strong>, and finishing.{" "}
+              <strong>Level 4 drywall finish</strong> and{" "}
+              <strong>Level 5 drywall finish</strong> available.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Professional taping & mudding
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Skim coat after drywall
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Level 5 smooth finish
+              </li>
+            </ul>
+          </div>
+
+          {/* Garage & Additions */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Garage & Home Additions
+            </h3>
+            <p className="text-gray-600 mb-4">
+              <strong>Garage drywall installation</strong>,{" "}
+              <strong>drywall installation for additions</strong>, bathroom and
+              kitchen drywall. Professional{" "}
+              <strong>gypsum board installation</strong>.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Bathroom drywall installation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Kitchen drywall installation
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Wallboard installation
+              </li>
+            </ul>
+          </div>
+
+          {/* Commercial Projects */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Commercial Drywall Installation
+            </h3>
+            <p className="text-gray-600 mb-4">
+              <strong>Commercial drywall installation</strong>,{" "}
+              <strong>office drywall installation</strong>, and{" "}
+              <strong>drywall installation for commercial buildouts</strong>.
+              Licensed commercial contractor.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Office spaces
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Retail buildouts
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Tenant improvements
+              </li>
+            </ul>
+          </div>
+
+          {/* Residential Projects */}
+          <div className="group rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl hover:border-red-500 transition-all duration-300">
+            <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Residential Drywall Installation
+            </h3>
+            <p className="text-gray-600 mb-4">
+              <strong>Residential drywall installation</strong> for homes and
+              condos.
+              <strong>Condo drywall installation</strong>,{" "}
+              <strong>sheetrock installation</strong>, and{" "}
+              <strong>drywall replacement</strong> services.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Whole-home installations
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Install new drywall
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Drywall installation for remodeling
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="bg-gray-50 py-16">
+        <div className="container-x">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Professional Drywall Installation Work
+            </h2>
+            <p className="text-lg text-gray-600">
+              Recent <strong>drywall hanging</strong> and finishing projects in
+              Calgary
+            </p>
+          </div>
+          <ServiceGallery images={IMAGES} />
+        </div>
+      </section>
+
+      {/* WHAT WE FIX */}
+      <section className="container-x py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-lg max-w-none mx-auto">
+            <h2 className="text-center text-3xl font-bold text-gray-900 mb-8">
+              What We Fix &amp; Build
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <ul className="space-y-3">
+                <li>
+                  <strong>Repairs &amp; patching:</strong> water damage, popped
+                  screws, dents, holes, bad seams, corner beads.
+                </li>
+                <li>
+                  <strong>Ceiling work:</strong> smooth finish or matching
+                  knockdown/orange‑peel textures; pot‑light changes.
+                </li>
+                <li>
+                  <strong>Level 5 smooth:</strong> skim coat for ultra‑flat,
+                  premium paint results.
+                </li>
+              </ul>
+              <ul className="space-y-3">
+                <li>
+                  <strong>Installations:</strong> basements, new rooms,
+                  bulkheads, sound‑reducing assemblies.
+                </li>
+                <li>
+                  <strong>Taping &amp; mudding:</strong> crisp seams, tight
+                  corners, consistent coats and sanding.
+                </li>
+                <li>
+                  <strong>Prime &amp; paint:</strong> optional finishing for a
+                  single, clean hand‑off.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO-RICH CONTENT SECTION */}
+      <section className="container-x py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-li:text-gray-700">
+            <h2>Calgary's Trusted Drywall Installation Contractor</h2>
+            <p>
+              Looking for reliable{" "}
+              <strong>professional drywall installation services</strong> in
+              Calgary? Our expert{" "}
+              <strong>drywall contractors for installation</strong> deliver
+              quality workmanship for residential and commercial projects. From{" "}
+              <strong>basement drywall installation</strong> to complete home
+              renovations, we're your trusted <strong>drywall installer</strong>
+              . We also specialize in{" "}
+              <Link
+                href="/"
+                className="text-red-600 font-semibold hover:text-red-700 transition"
+              >
+                popcorn ceiling removal and smooth ceiling finishing
+              </Link>
+              .
+            </p>
+
+            <h3>Comprehensive Drywall Installation Services</h3>
+            <p>
+              Whether you need to <strong>hang drywall</strong> for a new
+              basement, require <strong>ceiling drywall installation</strong>,
+              or want to <strong>install new drywall</strong> during a
+              renovation, our <strong>licensed drywall installer</strong> team
+              handles it all. We specialize in:
+            </p>
+            <ul>
+              <li>
+                <strong>Basement drywall installation</strong> — Complete
+                basement finishing with moisture-resistant materials, proper
+                insulation, and vapor barriers
+              </li>
+              <li>
+                <strong>Ceiling drywall installation</strong> — Expert{" "}
+                <strong>drywall board installation</strong> and{" "}
+                <strong>drywall sheet installation</strong> for smooth or
+                textured finishes
+              </li>
+              <li>
+                <strong>Garage drywall installation</strong> — Fire-rated{" "}
+                <strong>sheetrock installation</strong> and code-compliant{" "}
+                <strong>wallboard installation</strong>
+              </li>
+              <li>
+                <strong>Commercial drywall installation</strong> —{" "}
+                <strong>Office drywall installation</strong> and{" "}
+                <strong>drywall installation for commercial buildouts</strong>
+              </li>
+              <li>
+                <strong>Residential drywall installation</strong> — Whole-home
+                projects including{" "}
+                <strong>bathroom drywall installation</strong> and{" "}
+                <strong>kitchen drywall installation</strong>
+              </li>
+            </ul>
+
+            <h3>Expert Drywall Hanging & Installation</h3>
+            <p>
+              Our professional <strong>drywall hanging</strong> service ensures
+              properly installed <strong>gypsum board installation</strong> with
+              correct fastening patterns and spacing. We handle{" "}
+              <strong>drywall installation for renovation</strong>,{" "}
+              <strong>drywall installation for remodeling</strong>, and{" "}
+              <strong>new drywall installation</strong> for additions and new
+              construction.
+            </p>
+            <p>
+              Need to <strong>remove and replace drywall</strong>? We provide
+              complete <strong>drywall replacement</strong> services including{" "}
+              <strong>drywall installation after demolition</strong>, perfect
+              for water damage repairs or layout changes.
+            </p>
+
+            <h3>Professional Drywall Finishing</h3>
+            <p>
+              Beyond <strong>drywall board installation</strong>, we provide
+              expert <strong>drywall finishing</strong> including:
+            </p>
+            <ul>
+              <li>
+                <strong>Drywall taping and mudding</strong> — Precise tape
+                application and multiple mud coats for seamless joints
+              </li>
+              <li>
+                <strong>Drywall sanding</strong> — Dust-controlled sanding for
+                smooth, paint-ready surfaces
+              </li>
+              <li>
+                <strong>Level 4 drywall finish</strong> — Standard smooth finish
+                suitable for flat paint and light textures
+              </li>
+              <li>
+                <strong>Level 5 drywall finish</strong> — Ultra-smooth premium
+                finish with <strong>skim coat after drywall</strong> for
+                high-end applications
+              </li>
+            </ul>
+
+            <h3>Licensed & Insured Drywall Contractor</h3>
+            <p>
+              As a <strong>licensed drywall installer</strong> and{" "}
+              <strong>insured drywall contractor</strong>, we follow all Calgary
+              building codes and safety standards. Our{" "}
+              <strong>drywall contractors for installation</strong> are
+              experienced professionals who deliver quality results on time and
+              on budget.
+            </p>
+
+            <h3>Residential & Commercial Projects</h3>
+            <p>
+              We provide <strong>residential drywall installation</strong> for
+              homes and <strong>condo drywall installation</strong>, as well as{" "}
+              <strong>commercial drywall installation</strong> for businesses.
+              Our services include{" "}
+              <strong>drywall installation for additions</strong>, whole-home
+              renovations, and{" "}
+              <strong>drywall installation for commercial buildouts</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING SECTION - GENERAL & COST KEYWORDS */}
+      <section className="bg-red-50 py-16">
+        <div className="container-x">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Transparent Drywall Installation Pricing
+              </h2>
+              <p className="text-lg text-gray-600">
+                Fair and honest pricing for{" "}
+                <strong>affordable drywall installation</strong>—professional
+                quality without surprises
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-red-600 to-red-700 p-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">
+                  Get Your Custom Drywall Installation Estimate
+                </h3>
+                <p className="text-red-100">
+                  Request a{" "}
+                  <strong className="text-white">
+                    drywall installation quote
+                  </strong>{" "}
+                  tailored to your specific project needs
+                </p>
+              </div>
+
+              <div className="p-8">
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-gray-200">
+                    <div className="text-3xl font-bold text-red-600 mb-2">
+                      Basic
+                    </div>
+                    <div className="text-sm text-gray-600 mb-3">
+                      Service Level
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Drywall Hanging
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Professional board installation and hanging services
+                    </p>
+                  </div>
+
+                  <div className="text-center p-6 rounded-xl bg-red-50 border-2 border-red-500 relative">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      MOST POPULAR
+                    </div>
+                    <div className="text-3xl font-bold text-red-600 mb-2">
+                      Complete
+                    </div>
+                    <div className="text-sm text-gray-600 mb-3">
+                      Service Level
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Full Installation
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Hanging, taping, mudding, and Level 4 finish
+                    </p>
+                  </div>
+
+                  <div className="text-center p-6 rounded-xl bg-gray-50 border-2 border-gray-200">
+                    <div className="text-3xl font-bold text-red-600 mb-2">
+                      Premium
+                    </div>
+                    <div className="text-sm text-gray-600 mb-3">
+                      Service Level
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Deluxe Package
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Level 5 finish, prime coat, and paint-ready
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mb-8">
+                  <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <svg
+                      className="w-5 h-5 text-amber-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    What Influences Your Drywall Installation Investment?
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Project scope:</strong> Room size, basement,
+                          ceiling, or whole-home
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Ceiling height:</strong> Standard vs. vaulted
+                          or cathedral ceilings
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Total area:</strong> Square footage and number
+                          of rooms
+                        </span>
+                      </li>
+                    </ul>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Finish quality:</strong> Level 4 standard vs.
+                          Level 5 premium smooth
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Material selection:</strong> Standard,
+                          moisture-resistant, or fire-rated drywall
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-amber-500 font-bold mt-1">•</span>
+                        <span>
+                          <strong>Design complexity:</strong> Curves, arches,
+                          bulkheads, or custom features
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-gray-700 mb-6">
+                    Every project is unique. Get a personalized{" "}
+                    <strong>drywall installation estimate</strong> from our{" "}
+                    <strong>licensed drywall installer</strong> team in
+                    Calgary—no obligation, free consultation.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <Link href="/quote/" className={BTN + " text-lg px-8 py-3"}>
+                      <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                      Get Free Custom Quote
+                    </Link>
+                    <a
+                      href={phoneHref}
+                      className={BTN_ALT + " text-lg px-8 py-3"}
+                    >
+                      <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                      Call for Consultation
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* GALLERY */}
-      <div className="mt-10">
-        <ServiceGallery images={IMAGES} />
-      </div>
-
-      {/* WHAT WE FIX */}
-      <div className="prose mt-10">
-        <h2>What We Fix &amp; Build</h2>
-        <div className="grid gap-4 md:grid-cols-2">
-          <ul>
-            <li>
-              <strong>Repairs &amp; patching:</strong> water damage, popped
-              screws, dents, holes, bad seams, corner beads.
-            </li>
-            <li>
-              <strong>Ceiling work:</strong> smooth finish or matching
-              knockdown/orange‑peel textures; pot‑light changes.
-            </li>
-            <li>
-              <strong>Level 5 smooth:</strong> skim coat for ultra‑flat, premium
-              paint results.
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <strong>Installations:</strong> basements, new rooms, bulkheads,
-              sound‑reducing assemblies.
-            </li>
-            <li>
-              <strong>Taping &amp; mudding:</strong> crisp seams, tight corners,
-              consistent coats and sanding.
-            </li>
-            <li>
-              <strong>Prime &amp; paint:</strong> optional finishing for a
-              single, clean hand‑off.
-            </li>
-          </ul>
+      {/* PROCESS SECTION - MODERNIZED */}
+      <section className="container-x py-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Professional Drywall Installation Process
+          </h2>
+          <p className="text-lg text-gray-600">
+            Proven <strong>drywall hanging</strong> and finishing process from
+            Calgary's expert{" "}
+            <strong>drywall contractors for installation</strong>
+          </p>
         </div>
-      </div>
 
-      {/* PROCESS */}
-      <div className="mt-10">
-        <div className="prose">
-          <h2>Our Calgary‑Proven Process</h2>
-        </div>
-        <ol className="mt-4 grid gap-4 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               n: "01",
-              t: "Quick Quote",
-              d: "Text photos or request a visit. We confirm scope, schedule, and prep.",
+              t: "Free Consultation & Quote",
+              d: "Request a drywall installation estimate. We'll assess your project, discuss materials, finish levels, and provide transparent pricing.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              ),
             },
             {
               n: "02",
-              t: "Protect & Prep",
-              d: "Floors and fixtures covered. Clean cuts and framing as needed.",
+              t: "Site Preparation",
+              d: "Complete protection of floors, fixtures, and furniture. Clean cuts, proper framing checks, and material delivery.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              ),
             },
             {
               n: "03",
-              t: "Install & Fasten",
-              d: "Straight boards, proper spacing and fastening for longevity.",
+              t: "Expert Drywall Hanging",
+              d: "Professional drywall board installation with proper fastening patterns, spacing, and techniques for long-lasting results.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              ),
             },
             {
               n: "04",
-              t: "Tape & Mud",
-              d: "Tight seams, corners, beads; consistent coats for a flat plane.",
+              t: "Taping & Mudding",
+              d: "Precise drywall taping and mudding with multiple coats. Tight seams, crisp corners, and smooth transitions.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                  />
+                </svg>
+              ),
             },
             {
               n: "05",
-              t: "Sand & Check",
-              d: "Smooth, paint‑ready surface; light checks under raking light.",
+              t: "Professional Sanding",
+              d: "Dust-controlled drywall sanding for Level 4 or Level 5 drywall finish. Quality checks under raking light.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              ),
             },
             {
               n: "06",
-              t: "Prime & Finish",
-              d: "Optional painting to wrap your project cleanly.",
+              t: "Optional Finishing",
+              d: "Prime and paint services available. Complete your drywall installation project with one trusted contractor.",
+              icon: (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                  />
+                </svg>
+              ),
             },
           ].map((s) => (
-            <li key={s.n} className="rounded-2xl border p-5 shadow-sm">
-              <div className="text-xs font-bold text-muted">{s.n}</div>
-              <div className="mt-1 text-lg font-semibold text-ink">{s.t}</div>
-              <p className="mt-1 text-sm text-muted">{s.d}</p>
-            </li>
+            <div
+              key={s.n}
+              className="group relative rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg hover:border-red-500 transition-all duration-300"
+            >
+              <div className="absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 to-red-700 text-white font-bold flex items-center justify-center shadow-lg">
+                {s.n}
+              </div>
+              <div className="mb-4 ml-8 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                {s.icon}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{s.t}</h3>
+              <p className="text-gray-600">{s.d}</p>
+            </div>
           ))}
-        </ol>
-      </div>
+        </div>
+      </section>
 
-      {/* LOCAL AREAS */}
-      <div className="prose mt-10">
-        <h2>Serving All {city} Neighbourhoods</h2>
-        <p>
-          We work across {city}, including Beltline, Kensington (Hillhurst /
-          Sunnyside), Bridgeland, Inglewood, Mission, Marda Loop / Altadore,
-          Mount Royal, Signal Hill, West Springs, Tuscany, Arbour Lake, Varsity,
-          Brentwood, Bowness, Panorama Hills, Evergreen, Shawnessy, Somerset,
-          Mahogany, Auburn Bay, Cranston, Seton, McKenzie Towne, McKenzie Lake,
-          and more.
-        </p>
-        <p>
-          Not sure if we cover your area?{" "}
-          <a href={phoneHref} className={BTN}>
-            Call {phone}
-          </a>{" "}
-          and we’ll confirm right away.
-        </p>
-      </div>
-
-      {/* FAQ */}
-      <div className="prose mt-10">
-        <h2>Drywall FAQs</h2>
-        <details>
-          <summary>How long does a typical repair take?</summary>
-          <p>
-            Small patches are often completed in a day or two. Larger installs
-            run several days to allow proper drying between coats.
-          </p>
-        </details>
-        <details>
-          <summary>Will the repair be invisible after painting?</summary>
-          <p>
-            That’s our goal. With proper prep, taping, mudding, and sanding, the
-            surface blends in once primed and painted.
-          </p>
-        </details>
-        <details>
-          <summary>
-            Can you coordinate around lighting or framing changes?
-          </summary>
-          <p>
-            Yes—we can plan drywall work around pot‑light changes or minor
-            framing adjustments to keep your project moving smoothly.
-          </p>
-        </details>
-      </div>
-
-      {/* BOTTOM CTA */}
-      <div className="mt-10 rounded-3xl border bg-white p-6 shadow-sm">
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-          <div>
-            <p className="text-lg font-semibold text-ink">
-              Ready for smooth, paint‑ready drywall in {city}?
-            </p>
-            <p className="text-sm text-muted">
-              Clear pricing, tidy work, and on‑time results from a Calgary crew.
+      {/* SERVICE AREAS */}
+      <section className="bg-gray-50 py-16">
+        <div className="container-x">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Drywall Installation Services Across Calgary
+            </h2>
+            <p className="text-lg text-gray-600">
+              Professional <strong>drywall installer</strong> serving all
+              Calgary neighborhoods.
+              <strong>Licensed drywall contractor</strong> for residential and
+              commercial projects.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <a href={phoneHref} className={BTN}>
-              Call {phone}
-            </a>
-            <Link href="/quote/" className={BTN}>
-              Get a fast quote
-            </Link>
+          <div className="prose prose-lg max-w-4xl mx-auto text-center">
+            <p className="text-gray-700">
+              We provide <strong>basement drywall installation</strong>,{" "}
+              <strong>ceiling drywall installation</strong>, and complete{" "}
+              <strong>drywall installation services</strong> throughout Calgary
+              including: Beltline, Kensington, Hillhurst, Sunnyside, Bridgeland,
+              Inglewood, Mission, Marda Loop, Altadore, Mount Royal, Signal
+              Hill, West Springs, Tuscany, Arbour Lake, Varsity, Brentwood,
+              Bowness, Panorama Hills, Evergreen, Shawnessy, Somerset, Mahogany,
+              Auburn Bay, Cranston, Seton, McKenzie Towne, McKenzie Lake, and
+              surrounding areas.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-16">
+        <div className="container-x">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready for Professional Drywall Installation?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              <strong className="text-white">Licensed drywall installer</strong>{" "}
+              and{" "}
+              <strong className="text-white">insured drywall contractor</strong>{" "}
+              serving Calgary. Expert{" "}
+              <strong className="text-white">drywall hanging</strong>,{" "}
+              <strong className="text-white">drywall finishing</strong>, and
+              complete installation services.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-10 text-left">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+                <div className="text-red-400 font-bold mb-2">
+                  ✓ Licensed & Insured
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Professional drywall contractor
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+                <div className="text-red-400 font-bold mb-2">
+                  ✓ Transparent Pricing
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Free drywall installation quote
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+                <div className="text-red-400 font-bold mb-2">
+                  ✓ Quality Guarantee
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Level 5 finish available
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/quote/"
+                className="inline-flex items-center justify-center rounded-xl bg-white text-red-600 px-8 py-4 text-lg font-bold shadow-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                <svg
+                  className="w-6 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                Get Free Quote
+              </Link>
+              <a
+                href={phoneHref}
+                className="inline-flex items-center justify-center rounded-xl border-2 border-white text-white px-8 py-4 text-lg font-bold hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:scale-105"
+              >
+                <svg
+                  className="w-6 h-6 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                Call {phone}
+              </a>
+            </div>
+            <p className="mt-6 text-sm text-gray-400">
+              Professional Drywall Installation Contractor • Serving All Calgary
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

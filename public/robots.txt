@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://popcornceilingremovalcalgary.com
+
+# Sitemaps
+Sitemap: https://popcornceilingremovalcalgary.com/sitemap.xml
