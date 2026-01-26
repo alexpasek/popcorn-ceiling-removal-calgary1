@@ -31,6 +31,9 @@ export default function Header(){
           <Link href="/about-us" className="hover:underline">
             About us
           </Link>
+          <Link href="/blog" className="hover:underline">
+            Blog
+          </Link>
         </nav>
         <a href={SITE.phoneHref} className="btn btn-primary whitespace-nowrap">
           Call {SITE.phone}

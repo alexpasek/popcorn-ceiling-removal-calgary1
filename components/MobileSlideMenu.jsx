@@ -35,6 +35,7 @@ export default function MobileSlideMenu() {
     { href: "/services/interior-painting", label: "Interior Painting" },
     { href: "/services/knockdown-ceiling-repair", label: "Knockdown Repair" },
     { href: "/about-us/", label: "About us" },
+    { href: "/blog", label: "Blog" },
     { href: "/contact/", label: "Contact" },
   ];
 
