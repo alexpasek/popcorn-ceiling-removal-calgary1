@@ -351,12 +351,12 @@ export default function KnockdownRepairPage() {
             {[
               [
                 "Small patch",
-                "$150–$350",
+                "$300–$700",
                 "Single spot repair (e.g., small leak or dent).",
               ],
               [
                 "Medium repair",
-                "$350–$750",
+                "$700–$1,500",
                 "Multiple patches or larger cut‑outs; blending and paint.",
               ],
               [
@@ -378,12 +378,30 @@ export default function KnockdownRepairPage() {
             ))}
           </div>
           <div className="mt-8">
-            <Link
-              href="/quote"
-              className="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-red-600 text-white font-medium shadow hover:bg-red-700"
-            >
-              Get pricing & dates
-            </Link>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/quote"
+                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-red-600 text-white font-medium shadow hover:bg-red-700"
+              >
+                Get pricing & dates
+              </Link>
+              <Link
+                href="/blog/knockdown-ceiling-repair-cost-calgary-2026"
+                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
+              >
+                Read the 2026 cost guide
+              </Link>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">
+              For a deeper pricing breakdown, see our Calgary{" "}
+              <Link
+                href="/blog/knockdown-ceiling-repair-cost-calgary-2026"
+                className="underline hover:no-underline"
+              >
+                knockdown ceiling repair cost guide
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
