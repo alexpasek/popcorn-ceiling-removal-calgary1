@@ -1,5 +1,44 @@
 export const BLOG_POSTS = [
   {
+    slug: "matching-knockdown-ceiling-texture-calgary",
+    href: "/blog/matching-knockdown-ceiling-texture-calgary",
+    title: "Matching Knockdown Ceiling Texture in Calgary",
+    description:
+      "A practical Calgary guide to matching knockdown ceiling texture after patches, leaks, cracks, and cut-outs without obvious flashing or pattern mismatch.",
+    date: "2026-03-27",
+    dateLabel: "March 27, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/knockdown/matching-overview.svg",
+    imageAlt: "Illustration showing how knockdown ceiling texture is matched across a repair",
+    tags: ["Knockdown texture matching", "Ceiling repair", "Calgary guide"],
+  },
+  {
+    slug: "knockdown-ceiling-water-damage-repair-calgary",
+    href: "/blog/knockdown-ceiling-water-damage-repair-calgary",
+    title: "Knockdown Ceiling Water Damage Repair in Calgary",
+    description:
+      "How Calgary homeowners can assess stained, sagging, or cracked knockdown ceilings after leaks and what it takes to blend the repair correctly.",
+    date: "2026-03-27",
+    dateLabel: "March 27, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/knockdown/water-damage-blend.svg",
+    imageAlt: "Illustration of a water-damaged knockdown ceiling repair and blended texture",
+    tags: ["Water damage repair", "Knockdown ceiling", "Calgary homes"],
+  },
+  {
+    slug: "knockdown-ceiling-pot-light-patch-matching-calgary",
+    href: "/blog/knockdown-ceiling-pot-light-patch-matching-calgary",
+    title: "Knockdown Ceiling Texture Matching After Pot Light Changes in Calgary",
+    description:
+      "What happens to knockdown ceiling texture after pot-light moves, new fixtures, or cut-outs, and how the repair should be blended in Calgary homes.",
+    date: "2026-03-27",
+    dateLabel: "March 27, 2026",
+    readTime: "5 min read",
+    image: "/images/blog/knockdown/pot-light-patch.svg",
+    imageAlt: "Illustration showing pot-light cut-outs and knockdown texture blending",
+    tags: ["Pot light repair", "Knockdown texture", "Calgary ceilings"],
+  },
+  {
     slug: "knockdown-ceiling-repair-cost-calgary-2026",
     href: "/blog/knockdown-ceiling-repair-cost-calgary-2026",
     title: "Knockdown Ceiling Repair Cost in Calgary: 2026 Price Guide",

@@ -431,6 +431,49 @@ export default function KnockdownRepairPage() {
         </div>
       </section>
 
+      <section className="py-12 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold">
+            Learn more about texture matching
+          </h2>
+          <p className="mt-3 max-w-3xl text-slate-700">
+            These Calgary guides explain how knockdown texture matching works, what changes the repair scope, and how
+            pricing connects back to patch size, water damage, and fixture changes.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              [
+                "Matching Knockdown Ceiling Texture in Calgary",
+                "/blog/matching-knockdown-ceiling-texture-calgary",
+              ],
+              [
+                "Knockdown Ceiling Repair Cost in Calgary: 2026 Price Guide",
+                "/blog/knockdown-ceiling-repair-cost-calgary-2026",
+              ],
+              [
+                "Knockdown Ceiling Water Damage Repair in Calgary",
+                "/blog/knockdown-ceiling-water-damage-repair-calgary",
+              ],
+              [
+                "Knockdown Ceiling Texture Matching After Pot Light Changes in Calgary",
+                "/blog/knockdown-ceiling-pot-light-patch-matching-calgary",
+              ],
+            ].map(([label, href]) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="text-base font-semibold text-slate-900">{label}</div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  Read the article and then return here for a repair quote if your ceiling needs matching work.
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ (visible content mirrors JSON-LD) */}
       <section className="py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

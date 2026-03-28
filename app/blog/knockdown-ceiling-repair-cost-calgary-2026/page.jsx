@@ -256,11 +256,11 @@ export default function Page() {
                 ))}
               </ul>
 
-              <h2>Authority checks before you hire a knockdown repair crew</h2>
+              <h2>What to look for before you hire a knockdown repair crew</h2>
               <p>
                 Knockdown repair is a detail-driven trade. A clean result comes
-                from process, not guesswork. These are the authority signals
-                worth looking for when comparing contractors in {city}:
+                from process, not guesswork. These are the signs worth looking
+                for when comparing contractors in {city}:
               </p>
               <ul>
                 {AUTHORITY_SIGNALS.map((item) => (
@@ -309,6 +309,9 @@ export default function Page() {
                 <Link className="btn btn-primary" href="/quote">
                   Get a fast quote
                 </Link>
+                <Link className="btn border" href="/blog/matching-knockdown-ceiling-texture-calgary">
+                  Texture matching guide
+                </Link>
                 <Link className="btn border" href="/blog/popcorn-ceiling-removal-cost-calgary-2026">
                   Popcorn cost guide
                 </Link>
@@ -342,6 +345,22 @@ export default function Page() {
                 <p>{item.a}</p>
               </div>
             ))}
+            <h3>Related Calgary knockdown reading</h3>
+            <p>
+              If you want to understand why some patches blend better than others, read our{" "}
+              <Link href="/blog/matching-knockdown-ceiling-texture-calgary">
+                matching knockdown ceiling texture guide
+              </Link>
+              . For leak-related work, see our{" "}
+              <Link href="/blog/knockdown-ceiling-water-damage-repair-calgary">
+                water-damage repair article
+              </Link>
+              . For fixture changes, see our{" "}
+              <Link href="/blog/knockdown-ceiling-pot-light-patch-matching-calgary">
+                pot-light patch matching guide
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

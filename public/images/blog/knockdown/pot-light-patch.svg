@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="36" fill="#FFFDF8"/>
+  <rect x="50" y="50" width="1100" height="530" rx="28" fill="#F8FAFC" stroke="#FECACA" stroke-width="2"/>
+  <rect x="96" y="134" width="1008" height="294" rx="24" fill="#FFF7ED" stroke="#CBD5E1" stroke-width="2"/>
+  <g stroke="#94A3B8" stroke-width="4" stroke-linecap="round">
+    <path d="M141 214c50 14 60 27 98 24 38-3 49-25 90-24 45 1 53 27 98 27s51-24 94-24c43 0 53 22 97 24 42 2 53-8 91-18 40-10 58-8 95 3 39 11 57 23 94 21 34-3 50-20 88-28"/>
+    <path d="M141 286c43 13 62 22 98 20 36-2 48-18 88-19 48-1 58 24 98 25 42 1 57-17 96-20 38-4 55 7 92 16 41 10 56 9 95 0 38-8 58-18 96-18 35-1 52 7 86 18"/>
+    <path d="M140 354c47 11 60 22 99 20 38-2 46-17 88-19 45-2 57 17 99 20 40 4 58-8 96-16 42-8 59-2 97 9 38 11 54 18 90 17 36-2 54-12 92-24"/>
+  </g>
+  <circle cx="378" cy="266" r="44" fill="#0F172A"/>
+  <circle cx="378" cy="266" r="24" fill="#F8FAFC"/>
+  <circle cx="824" cy="266" r="44" fill="#0F172A"/>
+  <circle cx="824" cy="266" r="24" fill="#F8FAFC"/>
+  <rect x="540" y="206" width="122" height="120" rx="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" stroke-dasharray="10 10"/>
+  <path d="M484 168l44 42" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+  <path d="M716 168l-44 42" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+  <path d="M600 388v50" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+  <text x="96" y="100" fill="#991B1B" font-family="Arial, sans-serif" font-size="42" font-weight="700">Pot-Light Changes and Knockdown Patches</text>
+  <text x="98" y="494" fill="#334155" font-family="Arial, sans-serif" font-size="30" font-weight="700">Fixture moves leave cut-outs that need patching, re-texturing, and paint blending.</text>
+  <text x="98" y="538" fill="#475569" font-family="Arial, sans-serif" font-size="24">Support visual for Calgary pot-light patch matching content.</text>
+</svg>

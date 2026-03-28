@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="36" fill="#F8FAFC"/>
+  <rect x="52" y="52" width="1096" height="526" rx="30" fill="#FFF7ED" stroke="#FECACA" stroke-width="2"/>
+  <rect x="94" y="124" width="1012" height="324" rx="24" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M204 222c55-18 76-57 132-56 63 1 73 53 127 58 56 5 72-42 126-48 55-6 79 29 129 40 51 12 76 1 128-25" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M184 284c51-17 73-44 122-46 56-1 77 36 128 43 57 8 77-22 130-31 56-9 81 7 131 23 49 17 71 18 122 3" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M176 348c57-15 79-33 128-31 55 1 74 30 126 33 54 3 72-20 128-27 60-7 83 12 133 24 47 10 70 7 120-6" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M500 182c-38 20-66 54-66 103 0 65 46 119 108 132 69 14 132-23 159-76 19-37 24-74 52-100 18-17 49-28 49-60 0-58-58-87-106-70-29 11-41 36-56 58-13 19-31 35-56 32-26-2-33-25-43-43-14-23-44-38-73-33-13 2-24 8-32 17-12 12-14 28-16 40-1 1-8 0-20 0z" fill="#EAB308" fill-opacity=".24" stroke="#CA8A04" stroke-width="5"/>
+  <path d="M482 176c-12 42 33 67 70 64 43-4 57-39 80-66" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+  <path d="M686 282l80 82" stroke="#DC2626" stroke-width="6" stroke-linecap="round"/>
+  <path d="M766 282l-80 82" stroke="#DC2626" stroke-width="6" stroke-linecap="round"/>
+  <text x="96" y="98" fill="#991B1B" font-family="Arial, sans-serif" font-size="42" font-weight="700">Water Damage and Knockdown Texture Repair</text>
+  <text x="98" y="500" fill="#334155" font-family="Arial, sans-serif" font-size="30" font-weight="700">Leak stains and soft drywall need repair before texture can be blended.</text>
+  <text x="98" y="544" fill="#475569" font-family="Arial, sans-serif" font-size="24">Support visual for Calgary knockdown water-damage content.</text>
+</svg>
