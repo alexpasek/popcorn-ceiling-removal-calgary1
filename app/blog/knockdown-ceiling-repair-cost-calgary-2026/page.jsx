@@ -280,8 +280,8 @@ export default function Page() {
               <p>
                 If you want repair pricing based on your actual texture and
                 damage, visit our{" "}
-                <Link href="/services/knockdown-ceiling-repair">
-                  knockdown ceiling repair service
+                <Link href="/calgary/ceiling-texture-repair/">
+                  Calgary ceiling texture repair
                 </Link>{" "}
                 or request a <Link href="/quote">fast quote</Link>. We focus on
                 patching, texture matching, priming, and paint-ready handoff so
@@ -303,7 +303,7 @@ export default function Page() {
             <div className="card p-6">
               <h3 className="text-lg font-semibold text-ink">Useful links</h3>
               <div className="mt-4 grid gap-3 text-sm">
-                <Link className="btn border" href="/services/knockdown-ceiling-repair">
+                <Link className="btn border" href="/calgary/ceiling-texture-repair/">
                   Knockdown ceiling repair
                 </Link>
                 <Link className="btn btn-primary" href="/quote">

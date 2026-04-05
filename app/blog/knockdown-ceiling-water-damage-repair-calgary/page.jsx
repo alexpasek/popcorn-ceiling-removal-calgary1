@@ -37,8 +37,8 @@ const RELATED_LINKS = [
     href: "/blog/knockdown-ceiling-repair-cost-calgary-2026",
   },
   {
-    label: "Knockdown ceiling repair service",
-    href: "/services/knockdown-ceiling-repair",
+    label: "Knockdown ceiling repair",
+    href: "/calgary/ceiling-texture-repair/",
   },
   {
     label: "Pot-light patch matching guide",
@@ -179,10 +179,10 @@ export default function Page() {
                 ))}
               </ul>
 
-              <h2>How this passes back to the service page</h2>
+              <h2>How this passes back to the local repair page</h2>
               <p>
                 If your ceiling has staining, sagging, or old patch rings, the best next step is a proper{" "}
-                <Link href="/services/knockdown-ceiling-repair">knockdown ceiling repair assessment</Link>. From there
+                <Link href="/calgary/ceiling-texture-repair/">Calgary ceiling texture repair</Link>. From there
                 you can compare scope against our{" "}
                 <Link href="/blog/knockdown-ceiling-repair-cost-calgary-2026">
                   2026 pricing guide

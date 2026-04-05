@@ -36,8 +36,8 @@ const RELATED_LINKS = [
     href: "/blog/knockdown-ceiling-repair-cost-calgary-2026",
   },
   {
-    label: "Knockdown ceiling repair service",
-    href: "/services/knockdown-ceiling-repair",
+    label: "Calgary ceiling texture repair",
+    href: "/calgary/ceiling-texture-repair/",
   },
   {
     label: "Water-damage repair guide",
@@ -189,8 +189,8 @@ export default function Page() {
                 <Link href="/blog/knockdown-ceiling-repair-cost-calgary-2026">
                   knockdown repair pricing guide
                 </Link>
-                . If you need the repair done, go straight to the{" "}
-                <Link href="/services/knockdown-ceiling-repair">service page</Link>.
+                . If you need the repair done, go straight to{" "}
+                <Link href="/calgary/ceiling-texture-repair/">knockdown ceiling repair</Link>.
               </p>
 
               <h2>Related scenario: leak stains and water-damage repairs</h2>

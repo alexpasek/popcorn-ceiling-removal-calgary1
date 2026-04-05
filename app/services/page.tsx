@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Services | Popcorn Ceiling Removal Calgary',
   description:
-    'Explore services in Calgary: popcorn ceiling removal, drywall installation and repair, wallpaper removal, interior painting, and knockdown ceiling repair.',
+    'Explore services in Calgary: popcorn ceiling removal, knockdown ceiling texture, drywall installation and repair, wallpaper removal, interior painting, and knockdown ceiling repair.',
   alternates: { canonical: '/services' },
   openGraph: {
     title: 'Services | Popcorn Ceiling Removal Calgary',
@@ -21,6 +21,10 @@ export const metadata = {
 };
 const items = [
   {
+    title: "Knockdown Ceiling Texture",
+    href: "/calgary/knockdown-ceiling-texture",
+  },
+  {
     title: "Popcorn Ceiling Removal",
     href: "/services/popcorn-ceiling-removal-calgary",
   },
@@ -37,5 +41,5 @@ const items = [
   },
 ];
 export default function Page(){ return(<section className="container-x py-12"><h1 className="text-3xl font-extrabold text-ink">Services</h1>
-  <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{items.map(i=>(<li key={i.href} className="card p-6 hover:shadow-md transition"><h2 className="text-lg font-semibold text-ink">{i.title}</h2><p className="text-sm text-muted mt-2">Explore the process, prep, and finish quality.</p><Link href={i.href} className="btn mt-4 border">View</Link></li>))}</ul>
+  <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{items.map(i=>(<li key={i.href} className="card p-6 hover:shadow-md transition"><h2 className="text-lg font-semibold text-ink">{i.title}</h2><p className="text-sm text-muted mt-2">{i.href === "/calgary/knockdown-ceiling-texture" ? "Local Calgary page focused on knockdown ceiling texturing, prep, and conversions." : "Explore the process, prep, and finish quality."}</p><Link href={i.href} className="btn mt-4 border">View</Link></li>))}</ul>
 </section>); }

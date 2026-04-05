@@ -235,6 +235,32 @@ export default function Page() {
         </p>
       </div>
 
+      <div className="mt-10 rounded-3xl border bg-white p-6 shadow-sm">
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-red-700">
+            Popular upgrade after popcorn removal
+          </p>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-ink">
+            Knockdown ceiling texture is the next step for many Calgary homes
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-muted">
+            A lot of popcorn ceiling projects do not end with a bare scraped ceiling. Homeowners often want a more
+            modern textured finish once the old material is gone. If that is your goal, the dedicated{" "}
+            <Link href="/calgary/knockdown-ceiling-texture/" className="link-primary">
+              knockdown ceiling texture Calgary
+            </Link>{" "}
+            page explains the full commercial scope for prep, repairs, conversion work, and the new finish.
+          </p>
+          <p className="mt-3 text-sm leading-6 text-muted">
+            If you are comparing both paths before choosing, also review{" "}
+            <Link href="/blog/popcorn-to-knockdown-ceiling-conversion-calgary/" className="link-primary">
+              popcorn to knockdown ceiling Calgary
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
+
       {/* FAQ (onsite visible) */}
       <div className="prose mt-10">
         <h2>Popcorn Removal FAQs</h2>
