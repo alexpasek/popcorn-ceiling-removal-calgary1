@@ -24,10 +24,6 @@ export const metadata = {
 };
 
 export default function KnockdownRepairPage() {
-  const PHONE_NUMBER =
-    process.env.NEXT_PUBLIC_PHONE_NUMBER || "(825) 365-3770";
-  const PHONE_HREF = "tel:" + PHONE_NUMBER.replace(/[^0-9]/g, "");
-
   const jsonLdService = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -36,7 +32,6 @@ export default function KnockdownRepairPage() {
     provider: {
       "@type": "HomeAndConstructionBusiness",
       name: "Popcorn Ceiling Removal Calgary",
-      telephone: PHONE_NUMBER,
       url: "https://popcorn-ceiling-removal-calgaryfinal.pages.dev/",
     },
     hasOfferCatalog: {
@@ -233,10 +228,10 @@ export default function KnockdownRepairPage() {
                 Get My Free Quote
               </Link>
               <a
-                href={PHONE_HREF}
+                href="/quote"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
               >
-                Call {PHONE_NUMBER}
+                Contact Now
               </a>
             </div>
           </div>

@@ -86,10 +86,10 @@ export default function Footer() {
             <meta itemProp="addressCountry" content={addr.country} />
           </address>
 
-          {/* Phone CTA */}
+          {/* Contact CTA */}
           <a
-            href={SITE.phoneHref}
-            aria-label={`Call ${SITE.brand} at ${SITE.phone}`}
+            href={SITE.contactHref}
+            aria-label={`${SITE.contactLabel} for ${SITE.brand}`}
             className="group mt-3 inline-flex items-center gap-3 rounded-2xl border px-4 py-3 shadow-sm transition hover:shadow-md"
             style={{
               background: `linear-gradient(90deg, #fff, ${tint10})`,
@@ -100,20 +100,20 @@ export default function Footer() {
               className="flex h-9 w-9 items-center justify-center rounded-xl text-white transition group-hover:scale-105"
               style={{ background: accent }}
             >
-              <PhoneIcon className="h-4 w-4" />
+              <EnvelopeIcon className="h-4 w-4" />
             </span>
             <span className="leading-tight">
               <span
                 className="block text-[11px] uppercase tracking-wide"
                 style={{ color: accent, opacity: 0.85 }}
               >
-                Call
+                Contact
               </span>
               <span
                 className="block text-lg font-bold"
                 style={{ color: accent }}
               >
-                {SITE.phone}
+                {SITE.contactLabel}
               </span>
             </span>
           </a>
@@ -159,7 +159,7 @@ export default function Footer() {
 
           {/* Follow us (centered below text) */}
 
-          <div className="mt-3 mb-[calc(env(safe-area-inset-bottom)+60px)] md:mb-0">  {/*adjust icons heights above phone number */}
+          <div className="mt-3 mb-[calc(env(safe-area-inset-bottom)+60px)] md:mb-0">
             {socialLinks.length > 0 && (
               <div className="mt-6">
                 <div className="flex items-center justify-center">
@@ -199,18 +199,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-/* ===== Icons (inline, no external deps) ===== */
-function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.54.57 1 1 0 011 1v3.67a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.67a1 1 0 011 1 11.36 11.36 0 00.57 3.54 1 1 0 01-.21 1.11l-2.41 2.14z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
 

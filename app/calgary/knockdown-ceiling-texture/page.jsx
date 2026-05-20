@@ -303,10 +303,10 @@ export default function Page() {
                   Get your free estimate
                 </Link>
                 <a
-                  href={SITE.phoneHref}
+                  href="/quote/"
                   className="inline-flex min-h-[52px] items-center justify-center border border-[#94a3b8] bg-white px-5 text-sm font-semibold text-ink transition hover:bg-[#fafafa]"
                 >
-                  Call now {SITE.phone}
+                  Contact Now
                 </a>
               </div>
 
@@ -647,10 +647,10 @@ export default function Page() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <a
-                href={SITE.phoneHref}
+                href="/quote/"
                 className="inline-flex min-h-[52px] items-center justify-center bg-[#C73E2C] px-6 text-sm font-semibold text-white transition hover:bg-[#A93325]"
               >
-                Call now {SITE.phone}
+                Contact Now
               </a>
               <Link
                 href="/quote/"

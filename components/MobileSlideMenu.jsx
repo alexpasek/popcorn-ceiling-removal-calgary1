@@ -149,8 +149,7 @@ export default function MobileSlideMenu() {
 
           {/* CTAs */}
           <div className="mt-6 grid gap-3">
-            <a href={SITE?.phoneHref || "tel:+18253653770"} className={BTN}>
-              {/* phone icon */}
+            <Link href={SITE?.contactHref || "/quote"} className={BTN} onClick={() => setOpen(false)}>
               <svg
                 viewBox="0 0 24 24"
                 className="mr-2 h-4 w-4"
@@ -161,10 +160,10 @@ export default function MobileSlideMenu() {
                 strokeLinejoin="round"
                 aria-hidden
               >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.2a2 2 0 0 1 2.11-.45c.81.3 1.65.51 2.51.63A2 2 0 0 1 22 16.92z" />
+                <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
               </svg>
-              {SITE?.phone || "+1 (825) 365‑3770"}
-            </a>
+              {SITE?.contactLabel || "Contact Now"}
+            </Link>
             <Link href="/quote/" className={BTN} onClick={() => setOpen(false)}>
               Get a fast quote
             </Link>

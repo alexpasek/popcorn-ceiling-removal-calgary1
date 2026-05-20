@@ -32,8 +32,6 @@ export const metadata = {
 };
 
 export default function Page() {
-  const phone = SITE.phone || "(825) 365-3770";
-  const phoneHref = SITE.phoneHref || "tel:+18253653770";
   const address: Address =
     SITE.address ?? {
       street: "",
@@ -55,7 +53,6 @@ export default function Page() {
       name: SITE.brand,
       url: SITE.domain,
       areaServed: serviceAreas.map((name) => ({ "@type": "Place", name })),
-      telephone: phoneHref.replace("tel:+", "+"),
       email,
       address: {
         "@type": "PostalAddress",
@@ -69,7 +66,6 @@ export default function Page() {
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: phoneHref.replace("tel:+", "+"),
           email,
           contactType: "sales",
           areaServed: "CA-AB",
@@ -99,16 +95,9 @@ export default function Page() {
         <div className="rounded-2xl border bg-white p-6 shadow-sm">
           <h2 className="text-xl font-semibold text-ink">Contact</h2>
           <p className="text-sm text-muted mt-2">
-            Call or submit the form for a fast estimate in Calgary and nearby
-            areas.
+            Submit the form for a fast estimate in Calgary and nearby areas.
           </p>
           <div className="mt-4 space-y-2 text-sm text-ink">
-            <div>
-              <span className="font-semibold">Phone:</span>{" "}
-              <a href={phoneHref} className="link-primary">
-                {phone}
-              </a>
-            </div>
             <div>
               <span className="font-semibold">Email:</span>{" "}
               <a href={emailHref} className="link-primary">

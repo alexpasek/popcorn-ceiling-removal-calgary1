@@ -77,8 +77,6 @@ export async function generateMetadata({ params }) {
 export default function Page({ params }) {
   const area = fromSlug(params.slug);
   const city = SITE?.city || "Calgary";
-  const phone = SITE?.phone || "+1 (825) 365-3770";
-  const phoneHref = SITE?.phoneHref || "tel:+18253653770";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -88,7 +86,6 @@ export default function Page({ params }) {
     provider: {
       "@type": "LocalBusiness",
       name: SITE?.brand || "EPF Pro Services",
-      telephone: phone,
     },
   };
 
@@ -150,8 +147,8 @@ export default function Page({ params }) {
 
       {/* CTAs */}
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href={phoneHref} className={BTN}>
-          Call {phone}
+        <a href="/quote/" className={BTN}>
+          Contact Now
         </a>
         <Link href="/quote/" className={BTN}>
           Get a fast quote

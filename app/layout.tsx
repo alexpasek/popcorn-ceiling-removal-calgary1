@@ -64,7 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: SITE.brand,
     url: SITE.domain,
     image: `${SITE.domain}/logo.jpg`,
-    telephone: SITE.phoneHref.replace("tel:+", "+"),
     priceRange: SITE.priceRange,
     email: email || undefined,
     address: {
@@ -99,7 +98,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {
         "@type": "ContactPoint",
         contactType: "customer service",
-        telephone: SITE.phoneHref.replace("tel:+", "+"),
         email: email || undefined,
         areaServed: "CA-AB",
         availableLanguage: ["en"],

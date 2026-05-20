@@ -18,9 +18,6 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER || "(825) 365-3770";
-  const PHONE_HREF = "tel:" + PHONE_NUMBER.replace(/[^0-9]/g, "");
-
   const jsonLdLocalBusiness = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -68,7 +65,6 @@ export default function AboutPage() {
         },
       ],
     },
-    telephone: PHONE_NUMBER,
   };
 
   const jsonLdBreadcrumb = {
@@ -162,10 +158,10 @@ export default function AboutPage() {
                 Get a Fast Quote
               </Link>
               <a
-                href={PHONE_HREF}
+                href="/quote"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
               >
-                Call {PHONE_NUMBER}
+                Contact Now
               </a>
             </div>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
@@ -397,10 +393,10 @@ export default function AboutPage() {
               Start your quote
             </Link>
             <a
-              href={PHONE_HREF}
+              href="/quote"
               className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
             >
-              Call {PHONE_NUMBER}
+              Contact Now
             </a>
           </div>
         </div>

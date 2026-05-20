@@ -20,8 +20,6 @@ function toTitle(slug) {
 export default function Page() {
   var area = toTitle("west Springs");
   var city = SITE && SITE.city ? SITE.city : "Calgary";
-  var phone = SITE && SITE.phone ? SITE.phone : "(825) 365-3770";
-  var phoneHref = SITE && SITE.phoneHref ? SITE.phoneHref : "tel:+18253653770";
 
   return (
     <main className="container-x py-12">
@@ -45,8 +43,8 @@ export default function Page() {
 
       {/* CTAs (brand red) */}
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href={phoneHref} className={BTN}>
-          Call {phone}
+        <a href="/quote/" className={BTN}>
+          Contact Now
         </a>
         <Link href="/quote" className={BTN}>
           Get a Quote

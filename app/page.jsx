@@ -10,7 +10,7 @@ export const metadata = {
   title:
     "Professional Popcorn Ceiling Removal Calgary | Smooth Ceiling Contractor",
   description:
-    "Expert popcorn ceiling removal contractor in Calgary. Professional ceiling texture removal, stipple ceiling removal, and ceiling resurfacing. Fast, dust-controlled service. Call (825) 365-3770.",
+    "Expert popcorn ceiling removal contractor in Calgary. Professional ceiling texture removal, stipple ceiling removal, and ceiling resurfacing. Fast, dust-controlled service through our contact form.",
   keywords:
     "popcorn ceiling removal Calgary, popcorn ceiling contractor, professional popcorn ceiling removal, smooth ceiling contractor, ceiling texture removal, stipple ceiling removal, ceiling resurfacing, popcorn ceiling removal service",
   alternates: { canonical: SITE.domain },
@@ -46,8 +46,6 @@ const BTN_ALT =
   "inline-flex items-center justify-center rounded-xl border border-red-600 px-4 py-2 font-semibold text-red-700 hover:bg-red-50 transition";
 
 export default function Page() {
-  const phoneHref = SITE?.phoneHref || "tel:+18253653770";
-  const phone = SITE?.phone || "+1 (825) 365‑3770";
   const brand = SITE?.brand || "Popcorn Ceiling Removal Calgary";
   const city = SITE?.city || "Calgary";
   const serviceAreas = SITE?.serviceAreas || ["Calgary, AB"];
@@ -61,7 +59,6 @@ export default function Page() {
     description:
       "Professional popcorn ceiling removal contractor specializing in ceiling texture removal, stipple ceiling removal, and smooth ceiling resurfacing services in Calgary.",
     url: SITE.domain,
-    telephone: phone,
     image: `${SITE.domain}/logo.jpg`,
     priceRange: SITE.priceRange,
     address: {
@@ -284,7 +281,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href={phoneHref} className={BTN}>
+              <a href="/quote/" className={BTN}>
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -298,7 +295,7 @@ export default function Page() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                Call {phone}
+                Contact Now
               </a>
               <Link href="/quote/" className={BTN}>
                 <svg
@@ -1081,10 +1078,10 @@ export default function Page() {
                       Get Free Detailed Quote
                     </Link>
                     <a
-                      href={phoneHref}
+                      href="/quote/"
                       className={BTN_ALT + " text-lg px-8 py-3"}
                     >
-                      Call for Pricing: {phone}
+                      Contact Now
                     </a>
                   </div>
                 </div>
@@ -1434,7 +1431,7 @@ export default function Page() {
                 Get Free Quote
               </Link>
               <a
-                href={phoneHref}
+                href="/quote/"
                 className="inline-flex items-center justify-center rounded-xl border-2 border-white text-white px-8 py-4 text-lg font-bold hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:scale-105"
               >
                 <svg
@@ -1450,7 +1447,7 @@ export default function Page() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                Call {phone}
+                Contact Now
               </a>
             </div>
             <p className="mt-6 text-sm text-gray-400">

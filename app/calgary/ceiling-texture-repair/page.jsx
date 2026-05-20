@@ -183,10 +183,10 @@ export default function Page() {
 
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <a
-                  href={SITE.phoneHref}
+                  href="/quote/"
                   className="inline-flex min-h-[52px] items-center justify-center bg-[#A93325] px-5 text-sm font-semibold text-white transition hover:bg-[#8B2A1F]"
                 >
-                  Call now {SITE.phone}
+                  Contact Now
                 </a>
                 <Link
                   href="/quote/"

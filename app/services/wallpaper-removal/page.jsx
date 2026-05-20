@@ -31,8 +31,6 @@ const BTN_ALT =
 export default function Page() {
   const city = SITE?.city || "Calgary";
   const brand = SITE?.brand || "Wallpaper Removal Pro";
-  const phoneHref = SITE?.phoneHref || "tel:+1";
-  const phone = SITE?.phone || "(000) 000‑0000";
 
   const jsonLdService = {
     "@context": "https://schema.org",
@@ -40,7 +38,7 @@ export default function Page() {
     name: "Wallpaper Removal",
     serviceType: "Wallcovering removal",
     areaServed: { "@type": "City", name: "Calgary" },
-    provider: { "@type": "LocalBusiness", name: brand, telephone: phone },
+    provider: { "@type": "LocalBusiness", name: brand },
   };
 
   const jsonLdFAQ = {
@@ -109,8 +107,8 @@ export default function Page() {
             smooth and ready for fresh paint.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href={phoneHref} className={BTN}>
-              Call {phone}
+            <a href="/quote/" className={BTN}>
+              Contact Now
             </a>
             <Link href="/quote/" className={BTN}>
               Get a fast quote
@@ -263,8 +261,8 @@ export default function Page() {
         </p>
         <p>
           Not sure if we cover your area?{" "}
-          <a href={phoneHref} className="link-primary">
-            Call {phone}
+          <a href="/quote/" className="link-primary">
+            Contact Now
           </a>{" "}
           and we’ll confirm right away.
         </p>
@@ -309,8 +307,8 @@ export default function Page() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href={phoneHref} className={BTN}>
-              Call {phone}
+            <a href="/quote/" className={BTN}>
+              Contact Now
             </a>
             <Link href="/quote/" className={BTN}>
               Get a fast quote

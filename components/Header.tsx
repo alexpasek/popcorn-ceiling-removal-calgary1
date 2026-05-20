@@ -35,9 +35,9 @@ export default function Header(){
             Blog
           </Link>
         </nav>
-        <a href={SITE.phoneHref} className="btn btn-primary whitespace-nowrap">
-          Call {SITE.phone}
-        </a>
+        <Link href={SITE.contactHref} className="btn btn-primary whitespace-nowrap">
+          {SITE.contactLabel}
+        </Link>
       </div>
     </header>
   );
