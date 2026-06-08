@@ -1,5 +1,6 @@
 export const SITE = {
   brand: "Popcorn Ceiling Removal Calgary",
+  legalName: "Alpha Drywall Finishing Service",
   accent: "#E31B23",
   priceRange: "$$",
   address: {

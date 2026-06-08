@@ -45,6 +45,9 @@ export default function Footer() {
         {/* Left column */}
         <div>
           <div className="font-bold text-ink">{SITE.brand}</div>
+          <div className="text-xs text-muted mt-1">
+            Legally operated under {SITE.legalName}
+          </div>
           <div className="text-sm text-muted mt-1">Serving {SITE.city}</div>
           <div className="text-sm text-muted">Hours: {SITE.hours}</div>
 
@@ -155,6 +158,9 @@ export default function Footer() {
           </p>
           <p className="mt-2">
             © {year} {SITE.brand}. All rights reserved.
+          </p>
+          <p className="mt-1 text-xs">
+            {SITE.brand} is legally operated under {SITE.legalName}.
           </p>
 
           {/* Follow us (centered below text) */}

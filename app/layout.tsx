@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "HomeAndConstructionBusiness",
     "@id": `${SITE.domain}/#business`,
     name: SITE.brand,
+    legalName: SITE.legalName,
     url: SITE.domain,
     image: `${SITE.domain}/logo.jpg`,
     priceRange: SITE.priceRange,
