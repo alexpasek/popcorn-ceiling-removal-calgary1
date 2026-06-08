@@ -43,8 +43,8 @@ export default function Page() {
 
       {/* CTAs (brand red) */}
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href="/quote/" className={BTN}>
-          Contact Now
+        <a href="tel:+18253653770" className={BTN}>
+          (825) 365-3770
         </a>
         <Link href="/quote" className={BTN}>
           Get a Quote

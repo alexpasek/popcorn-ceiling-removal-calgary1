@@ -303,10 +303,10 @@ export default function Page() {
                   Get your free estimate
                 </Link>
                 <a
-                  href="/quote/"
+                  href="tel:+18253653770"
                   className="inline-flex min-h-[52px] items-center justify-center border border-[#94a3b8] bg-white px-5 text-sm font-semibold text-ink transition hover:bg-[#fafafa]"
                 >
-                  Contact Now
+                  (825) 365-3770
                 </a>
               </div>
 
@@ -647,10 +647,10 @@ export default function Page() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <a
-                href="/quote/"
+                href="tel:+18253653770"
                 className="inline-flex min-h-[52px] items-center justify-center bg-[#C73E2C] px-6 text-sm font-semibold text-white transition hover:bg-[#A93325]"
               >
-                Contact Now
+                (825) 365-3770
               </a>
               <Link
                 href="/quote/"

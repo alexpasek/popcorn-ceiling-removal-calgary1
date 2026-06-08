@@ -183,10 +183,10 @@ export default function Page() {
 
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <a
-                  href="/quote/"
+                  href="tel:+18253653770"
                   className="inline-flex min-h-[52px] items-center justify-center bg-[#A93325] px-5 text-sm font-semibold text-white transition hover:bg-[#8B2A1F]"
                 >
-                  Contact Now
+                  (825) 365-3770
                 </a>
                 <Link
                   href="/quote/"

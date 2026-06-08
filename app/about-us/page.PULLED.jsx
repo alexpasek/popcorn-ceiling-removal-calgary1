@@ -158,10 +158,10 @@ export default function AboutPage() {
                 Get a Fast Quote
               </Link>
               <a
-                href="/quote"
+                href="tel:+18253653770"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
               >
-                Contact Now
+                (825) 365-3770
               </a>
             </div>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
@@ -393,10 +393,10 @@ export default function AboutPage() {
               Start your quote
             </Link>
             <a
-              href="/quote"
+              href="tel:+18253653770"
               className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 text-slate-800 hover:bg-slate-50"
             >
-              Contact Now
+              (825) 365-3770
             </a>
           </div>
         </div>

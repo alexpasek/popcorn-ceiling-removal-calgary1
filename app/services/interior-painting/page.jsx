@@ -107,8 +107,8 @@ export default function Page() {
             for a fresh, modern look.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href="/quote/" className={BTN}>
-              Contact Now
+            <a href="tel:+18253653770" className={BTN}>
+              (825) 365-3770
             </a>
             <Link href="/quote/" className={BTN}>
               Get a fast quote
@@ -261,8 +261,8 @@ export default function Page() {
         </p>
         <p>
           Not sure if we cover your area?{" "}
-          <a href="/quote/" className="link-primary">
-            Contact Now
+          <a href="tel:+18253653770" className="link-primary">
+            (825) 365-3770
           </a>{" "}
           and we’ll confirm right away.
         </p>
@@ -307,8 +307,8 @@ export default function Page() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href="/quote/" className={BTN}>
-              Contact Now
+            <a href="tel:+18253653770" className={BTN}>
+              (825) 365-3770
             </a>
             <Link href="/quote/" className={BTN}>
               Get a fast quote
