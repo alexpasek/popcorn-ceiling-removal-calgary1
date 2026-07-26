@@ -1,138 +1,63 @@
 import type { Metadata } from "next";
-import MobileSlideMenu from "@/components/MobileSlideMenu";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import MobileCTA from "@/components/MobileCTA";
-import { SITE } from "@/data/site";
-
-type Address = {
-  street: string;
-  city: string;
-  region: string;
-  postalCode: string;
-  country: string;
-};
-
-type Geo = {
-  lat?: number;
-  lng?: number;
-};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE.domain),
-  title: "Popcorn Ceiling Removal Calgary | Drywall Installation & Painting",
-  description: SITE.description,
-  alternates: { canonical: SITE.domain },
-  openGraph: {
-    title: "Popcorn Ceiling Removal Calgary",
-    description: SITE.description,
-    type: "website",
-    locale: "en_CA",
-    url: SITE.domain,
+  title: "Under Construction",
+  description:
+    "Our website is currently under construction. All services are temporarily unavailable.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
   },
-  twitter: {
-    card: "summary",
-    title: "Popcorn Ceiling Removal Calgary",
-    description: SITE.description,
-  },
-  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const address: Address =
-    SITE.address ?? {
-      street: "",
-      city: "",
-      region: "",
-      postalCode: "",
-      country: "",
-    };
-  const geo: Geo = SITE.geo ?? {};
-  const email = SITE.email || "";
-  const emailHref = SITE.emailHref || (email ? `mailto:${email}` : "");
-  const sameAs = Object.values(SITE.socials || {}).filter(Boolean);
-  const areaServed = (SITE.serviceAreas || []).map((name) => ({
-    "@type": "Place",
-    name,
-  }));
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `${SITE.domain}/#business`,
-    name: SITE.brand,
-    legalName: SITE.legalName,
-    url: SITE.domain,
-    image: `${SITE.domain}/logo.jpg`,
-    priceRange: SITE.priceRange,
-    email: email || undefined,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: address.street,
-      addressLocality: address.city,
-      addressRegion: address.region,
-      postalCode: address.postalCode,
-      addressCountry: address.country,
-    },
-    geo:
-      typeof geo.lat === "number" && typeof geo.lng === "number"
-        ? { "@type": "GeoCoordinates", latitude: geo.lat, longitude: geo.lng }
-        : undefined,
-    areaServed,
-    sameAs,
-    openingHours: "Mo-Sa 08:00-18:00",
-    hasMap: `${SITE.domain}/contact`,
-    serviceType: [
-      "Popcorn ceiling removal",
-      "Drywall installation",
-      "Drywall repair",
-      "Wallpaper removal",
-      "Interior painting",
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "87",
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        email: email || undefined,
-        areaServed: "CA-AB",
-        availableLanguage: ["en"],
-      },
-    ],
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${SITE.domain}/#popcorn-service`,
-    name: "Popcorn Ceiling Removal",
-    provider: { "@type": "LocalBusiness", name: SITE.brand, "@id": `${SITE.domain}/#business` },
-    areaServed,
-    serviceType: "Ceiling texture removal",
-    url: SITE.domain,
-  };
-
+export default function RootLayout() {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <MobileSlideMenu />
-        <main>{children}</main>
-        <Footer />
-        <MobileCTA />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
+      <body className="maintenance-body">
+        <main className="maintenance-page">
+          <div className="maintenance-glow maintenance-glow-one" />
+          <div className="maintenance-glow maintenance-glow-two" />
+
+          <section className="maintenance-card" aria-labelledby="maintenance-title">
+            <div className="maintenance-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M24.5 11.5a13 13 0 0 0 15.8 16.7L52 39.9a5 5 0 1 1-7.1 7.1L33.2 35.3A13 13 0 0 0 16.5 19.5l7.8 7.8 7-7-6.8-8.8Z" />
+                <path d="m12 49 15.5-15.5" />
+                <circle cx="10.5" cy="50.5" r="4.5" />
+              </svg>
+            </div>
+
+            <p className="maintenance-eyebrow">
+              <span />
+              A fresh look is on the way
+            </p>
+
+            <h1 id="maintenance-title">
+              We&apos;re under
+              <span>construction.</span>
+            </h1>
+
+            <p className="maintenance-copy">
+              We&apos;re working behind the scenes to build a better experience.
+              Our website and all services are temporarily unavailable.
+            </p>
+
+            <div className="maintenance-status">
+              <span className="maintenance-status-dot" />
+              All services are currently unavailable
+            </div>
+
+            <p className="maintenance-note">
+              Thank you for your patience. Please check back soon.
+            </p>
+          </section>
+
+          <p className="maintenance-footer">
+            © {new Date().getFullYear()} · We&apos;ll be back soon
+          </p>
+        </main>
       </body>
     </html>
   );
